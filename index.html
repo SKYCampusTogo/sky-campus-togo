@@ -570,13 +570,39 @@
       gap:12px;
     }
 
-    .footer-brand img{
-      width:58px;
-      border-radius:12px;
-      background:#fff;
-      box-shadow:0 2px 10px rgba(0,0,0,.05);
-      padding:4px;
-    }
+   .footer-brand img{
+  height:55px;
+  width:auto;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  padding:4px;
+}
+4. Commit changes
+
+Après ça :
+
+Commit changes
+attends 5 à 10 secondes
+recharge ton site
+Pourquoi ça marche mieux
+
+Avec ./logo.png, Vercel sert directement le fichier qui est dans ton projet.
+C’est plus propre, plus stable, et ça évite les soucis de lien GitHub.
+
+Résumé exact
+
+Dans ton code, tu dois avoir :
+
+<img src="./logo.png" alt="SKY Campus Togo">
+
+aux 2 endroits.
+
+Et ton fichier dans GitHub doit s’appeler :
+
+logo.png
+
+Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renommage, et je te dis en une ligne si c’est bon ou pas.
 
     .footer-brand strong{
       display:block;
