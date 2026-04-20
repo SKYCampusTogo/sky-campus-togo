@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SKY Campus Togo</title>
-  <meta name="description" content="Séance découverte gratuite SKY Campus Togo pour les étudiants : bien-être, confiance, concentration, employabilité et opportunités." />
+  <meta
+    name="description"
+    content="Séance découverte gratuite SKY Campus Togo pour les étudiants et jeunes actifs : bien-être, confiance, employabilité, leadership et entrepreneuriat."
+  />
   <style>
     :root{
       --green:#0f6b3e;
@@ -64,12 +67,12 @@
     }
 
     .brand img{
-       height:160px;
-  width:auto;
-  border-radius:12px;
-  background:#fff;
-  padding:4px;
-}
+      height:160px;
+      width:auto;
+      border-radius:12px;
+      background:#fff;
+      padding:4px;
+    }
 
     .brand-text{
       min-width:0;
@@ -176,6 +179,7 @@
     }
 
     .hero h1 .accent{color:var(--orange)}
+
     .hero p{
       margin:22px 0 0;
       font-size:20px;
@@ -570,39 +574,14 @@
       gap:12px;
     }
 
-   .footer-brand img{
-  height:55px;
-  width:auto;
-  border-radius:12px;
-  background:#fff;
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
-  padding:4px;
-}
-4. Commit changes
-
-Après ça :
-
-Commit changes
-attends 5 à 10 secondes
-recharge ton site
-Pourquoi ça marche mieux
-
-Avec ./logo.png, Vercel sert directement le fichier qui est dans ton projet.
-C’est plus propre, plus stable, et ça évite les soucis de lien GitHub.
-
-Résumé exact
-
-Dans ton code, tu dois avoir :
-
-<img src="./logo.png" alt="SKY Campus Togo">
-
-aux 2 endroits.
-
-Et ton fichier dans GitHub doit s’appeler :
-
-logo.png
-
-Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renommage, et je te dis en une ligne si c’est bon ou pas.
+    .footer-brand img{
+      height:55px;
+      width:auto;
+      border-radius:12px;
+      background:#fff;
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      padding:4px;
+    }
 
     .footer-brand strong{
       display:block;
@@ -710,8 +689,7 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
       <div class="brand">
         <img src="./logo.png" alt="SKY Campus Togo">
         <div class="brand-text">
-          <strong>
-          <span>Bien-être • Employabilité • Opportunités</span></strong>
+          <strong>SKY Campus Togo</strong>
         </div>
       </div>
 
@@ -735,17 +713,16 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
         </div>
 
         <h1>
-          Gères mieux le stress.<br>
-          Amélores ta confiance.<br>
-          <span class="accent">Plus d’opportunités.</span>
+          Gère mieux ton stress.<br>
+          Renforce ta confiance.<br>
+          <span class="accent">Développe ton avenir.</span>
         </h1>
 
         <p>
-          SKY Campus Togo aide les étudiants à découvrir des opportunités concrètes 
-          pour créer des revenus complémentairesen soit à travers l'emplois soit
-          l'entrepreneuriat. SKY Campus t'enseigne les outils pour améliorer ton employabilité, 
-          en développant ton leadership et tes aptitues sociales, 
-          en renforçant ta concentration, et en gérant mieux ton stress.
+          SKY Campus Togo accompagne les étudiants et les jeunes avec une approche adaptée
+          aux réalités du pays : mieux gérer le stress, renforcer la confiance en soi
+          et développer des opportunités concrètes à travers l’employabilité,
+          le leadership et l’entrepreneuriat.
         </p>
 
         <div class="hero-actions">
@@ -754,7 +731,7 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
         </div>
 
         <div class="hero-tags">
-          <span class="badge">Respiration</span>
+          <span class="badge">Gestion du stress</span>
           <span class="badge">Leadership</span>
           <span class="badge">Employabilité</span>
           <span class="badge">Entrepreneuriat</span>
@@ -764,17 +741,18 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
       <div class="hero-visual">
         <div class="visual-grid">
           <div class="card-photo-large">
-            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="Étudiants africains">
+            <img src="./images/sky-togo-hero-1.jpg" alt="Jeunes togolais participant à un atelier SKY Campus">
           </div>
           <div>
             <div class="card-photo-small">
-              <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80" alt="Étudiante africaine">
+              <img src="./images/sky-togo-hero-2.jpg" alt="Jeunes adultes en échange pendant une activité SKY Campus Togo">
             </div>
             <div class="card-highlight" style="margin-top:14px;">
-              <div class="mini">Séance découverte</div>
-              <h3>Un moment utile. Un cadre positif. Une vraie impulsion.</h3>
+              <div class="mini">Spécificité du Togo</div>
+              <h3>Un programme qui relie bien-être, employabilité et entrepreneuriat.</h3>
               <p>
-                Bien-être, confiance, concentration, leadership et ouverture sur des opportunités concrètes.
+                Une approche concrète pour aider les jeunes à gagner en stabilité intérieure
+                et à construire de vraies perspectives d’avenir.
               </p>
             </div>
           </div>
@@ -809,32 +787,45 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
   <section id="programme" class="section section-light">
     <div class="container">
       <p class="eyebrow">Le programme</p>
-      <h2>Un programme pensé pour la vraie vie étudiante</h2>
+      <h2>Un programme pensé pour les réalités des jeunes au Togo</h2>
       <p class="lead">
-        Des outils pratiques pour calmer le mental, retrouver de l’élan, gagner en confiance
-        et avancer avec plus de clarté dans ses études et dans sa vie.
+        SKY Campus Togo aide les jeunes à mieux gérer leur stress, à renforcer leur confiance,
+        à développer leurs compétences humaines et à avancer avec plus de clarté
+        dans leurs études, leur vie professionnelle et leurs projets.
       </p>
 
       <div class="cards-grid">
         <div class="info-card">
           <div class="icon">🧘🏾</div>
-          <h3>Gérer le stress</h3>
-          <p>Des outils concrets pour apaiser le mental, retrouver de l’énergie et mieux vivre les études.</p>
+          <h3>Mieux gérer le stress</h3>
+          <p>
+            Des outils pratiques pour apaiser le mental, retrouver de l’énergie
+            et faire face aux défis du quotidien avec plus de stabilité.
+          </p>
         </div>
         <div class="info-card">
           <div class="icon">🎯</div>
-          <h3>Mieux se concentrer</h3>
-          <p>Retrouve plus de clarté, de présence et de stabilité dans les cours, les examens et la vie quotidienne.</p>
+          <h3>Renforcer la concentration</h3>
+          <p>
+            Développe plus de clarté, d’attention et de présence
+            dans les études, les examens et les activités professionnelles.
+          </p>
         </div>
         <div class="info-card">
           <div class="icon">🚀</div>
-          <h3>Prendre confiance</h3>
-          <p>Développe ton leadership, ta capacité à parler, à agir et à avancer avec plus d’assurance.</p>
+          <h3>Développer le leadership</h3>
+          <p>
+            Prends davantage confiance en toi, améliore ta communication
+            et apprends à agir avec plus d’assurance et de responsabilité.
+          </p>
         </div>
         <div class="info-card">
           <div class="icon">💼</div>
-          <h3>Ouvrir des opportunités</h3>
-          <p>Découvre aussi des pistes concrètes d’employabilité, d’entrepreneuriat et de revenus complémentaires.</p>
+          <h3>Créer des opportunités</h3>
+          <p>
+            Découvre des pistes concrètes liées à l’employabilité,
+            à l’entrepreneuriat et aux revenus complémentaires.
+          </p>
         </div>
       </div>
     </div>
@@ -844,27 +835,30 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
     <div class="container split">
       <div>
         <p class="eyebrow">Employabilité, entrepreneuriat, revenus</p>
-        <h2>Nous proposons aussi des opportunités pour générer de l’argent</h2>
+        <h2>Au Togo, SKY Campus relie développement personnel et avenir professionnel</h2>
         <p class="lead">
-          SKY Campus Togo ne parle pas seulement de bien-être. Nous voulons aussi aider les étudiants
-          à développer des compétences utiles, à mieux se présenter, à communiquer, à vendre,
-          à prendre des initiatives et à découvrir des activités génératrices de revenus.
+          La spécificité de SKY Campus Togo est d’associer le bien-être des jeunes
+          à une ouverture vers des opportunités concrètes. Le programme aide à développer
+          des qualités utiles pour l’emploi, l’initiative personnelle, la communication,
+          le leadership et l’esprit d’entreprendre.
         </p>
 
         <div class="panel" style="margin-top:22px;">
           <h3>Partenaire principal : Sri Sri Tattva</h3>
           <p>
-            Une gamme internationale de produits naturels et ayurvédiques, avec une présence
-            dans de nombreux pays. Au démarrage, certaines opportunités peuvent concerner
-            des produits comme Sudanta.
+            Sri Sri Tattva est un partenaire de référence dans le domaine des produits naturels
+            et du bien-être. Certaines opportunités peuvent permettre aux jeunes intéressés
+            de découvrir une première expérience concrète autour de la présentation de produits,
+            de la relation client et de l’initiative entrepreneuriale.
           </p>
         </div>
 
         <div class="panel panel-note" style="margin-top:18px;">
           <strong>Transparence</strong>
           <p>
-            SKY Campus Togo ne promet pas un emploi garanti. Nous proposons un cadre de formation,
-            de développement personnel et d’accès à des opportunités concrètes pour les étudiants motivés.
+            SKY Campus Togo ne promet pas un emploi garanti. Le programme propose un cadre
+            de formation, de développement personnel et d’ouverture vers des opportunités concrètes
+            pour les étudiants et les jeunes motivés.
           </p>
         </div>
       </div>
@@ -873,24 +867,36 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
         <div class="cards-grid" style="grid-template-columns:1fr 1fr; margin-top:0;">
           <div class="info-card">
             <h3>Revenus complémentaires</h3>
-            <p>Découvre des activités simples et concrètes pour commencer à générer un revenu complémentaire.</p>
+            <p>
+              Découvre des pistes simples et concrètes pour commencer à développer
+              une activité complémentaire.
+            </p>
           </div>
           <div class="info-card">
-            <h3>Compétences commerciales</h3>
-            <p>Apprends à présenter un produit, comprendre un besoin et mieux communiquer.</p>
+            <h3>Compétences relationnelles</h3>
+            <p>
+              Apprends à mieux communiquer, à comprendre les besoins
+              et à présenter une idée ou un produit avec plus d’aisance.
+            </p>
           </div>
           <div class="info-card">
             <h3>Esprit entrepreneurial</h3>
-            <p>Passe de l’idée à l’action avec un cadre motivant, humain et orienté terrain.</p>
+            <p>
+              Passe plus facilement de l’idée à l’action avec un cadre motivant,
+              humain et orienté terrain.
+            </p>
           </div>
           <div class="info-card">
             <h3>Employabilité renforcée</h3>
-            <p>Développe des qualités recherchées : confiance, autonomie, leadership et rigueur.</p>
+            <p>
+              Développe des qualités recherchées : autonomie, confiance,
+              leadership, discipline et sens des responsabilités.
+            </p>
           </div>
         </div>
 
         <div class="photo-box">
-          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80" alt="Jeunes étudiants africains">
+          <img src="./images/sky-togo-section.jpg" alt="Jeunes togolais en activité de groupe dans le cadre de SKY Campus">
         </div>
       </div>
     </div>
@@ -899,12 +905,18 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
   <section id="temoignages" class="section section-green">
     <div class="container">
       <p class="eyebrow">Témoignages</p>
-      <h2>Des jeunes qui veulent avancer</h2>
-      <p class="lead">Des retours simples, humains et crédibles, dans un esprit positif et concret.</p>
+      <h2>Des jeunes qui veulent avancer avec plus de force et de clarté</h2>
+      <p class="lead">
+        Des retours simples, humains et concrets sur une expérience qui relie bien-être,
+        confiance et perspectives d’avenir.
+      </p>
 
       <div class="testimonial-grid">
         <div class="testimonial-card">
-          <p>“J’ai aimé le côté concret. On parle du stress, de la concentration, mais aussi du futur et des opportunités pour avancer.”</p>
+          <p>
+            “J’ai apprécié le côté concret. On travaille sur le stress et la concentration,
+            mais aussi sur la confiance et les opportunités pour avancer.”
+          </p>
           <div class="testimonial-meta">
             <strong>Ama</strong>
             <span>Étudiante à Lomé</span>
@@ -912,7 +924,10 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
         </div>
 
         <div class="testimonial-card">
-          <p>“Le programme donne à la fois du calme, de la confiance et une vraie envie de passer à l’action.”</p>
+          <p>
+            “Le programme m’a aidé à retrouver plus de calme, mais aussi à voir
+            comment développer des compétences utiles pour mon avenir.”
+          </p>
           <div class="testimonial-meta">
             <strong>Kossi</strong>
             <span>Étudiant entrepreneur</span>
@@ -920,7 +935,10 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
         </div>
 
         <div class="testimonial-card">
-          <p>“Je me suis sentie plus stable, plus claire dans ma tête, et j’ai mieux compris comment développer des compétences utiles pour la vie pro.”</p>
+          <p>
+            “Je me suis sentie plus stable, plus confiante, et j’ai mieux compris
+            comment relier développement personnel et vie professionnelle.”
+          </p>
           <div class="testimonial-meta">
             <strong>Afi</strong>
             <span>Jeune diplômée</span>
@@ -943,17 +961,37 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
 
         <details class="faq-item">
           <summary>À qui s’adresse SKY Campus Togo ?</summary>
-          <p>Aux étudiants et jeunes qui veulent mieux gérer leur stress, gagner en confiance, mieux se concentrer et découvrir des opportunités concrètes.</p>
+          <p>
+            Aux étudiants et aux jeunes qui veulent mieux gérer leur stress,
+            renforcer leur confiance, développer leur employabilité
+            et découvrir des opportunités liées à l’entrepreneuriat.
+          </p>
         </details>
 
         <details class="faq-item">
           <summary>Proposez-vous un emploi garanti ?</summary>
-          <p>Non. Nous proposons un cadre de formation, de développement personnel et d’accès à des opportunités concrètes pour les étudiants motivés.</p>
+          <p>
+            Non. SKY Campus Togo propose un cadre de formation
+            et d’ouverture vers des opportunités concrètes,
+            mais ne garantit pas un emploi.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Qu’est-ce qui distingue SKY Campus Togo ?</summary>
+          <p>
+            Sa spécificité est de relier le bien-être personnel,
+            le développement des compétences humaines, l’employabilité
+            et l’entrepreneuriat dans une approche adaptée aux réalités locales.
+          </p>
         </details>
 
         <details class="faq-item">
           <summary>Quel est le partenaire principal ?</summary>
-          <p>Sri Sri Tattva, partenaire principal pour les produits naturels et le développement d’opportunités autour du bien-être.</p>
+          <p>
+            Sri Sri Tattva, partenaire principal dans le domaine des produits naturels
+            et du développement d’opportunités liées au bien-être.
+          </p>
         </details>
       </div>
     </div>
@@ -968,7 +1006,8 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
             <h2>Réserve ta séance découverte gratuite</h2>
             <p>
               Rejoins un programme qui parle à ta réalité :
-              moins de stress, plus de confiance, plus de clarté et plus d’opportunités.
+              moins de stress, plus de confiance, plus de clarté
+              et plus d’opportunités pour construire ton avenir.
             </p>
           </div>
 
@@ -977,7 +1016,7 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
             <h3>Réserve ta place maintenant</h3>
             <p>
               Clique sur le bouton ci-dessous pour recevoir les informations
-              de la prochaine séance découverte.
+              sur la prochaine séance découverte SKY Campus Togo.
             </p>
             <a class="btn btn-primary" style="width:100%;" href="https://wa.me/33682578948">
               Réserver sur WhatsApp
@@ -994,7 +1033,7 @@ Si tu veux, envoie-moi une capture de la liste des fichiers du repo après renom
         <img src="./logo.png" alt="SKY Campus Togo">
         <div>
           <strong>SKY Campus Togo</strong>
-          <span>Bien-être, employabilité et opportunités</span>
+          <span>Bien-être, employabilité et entrepreneuriat</span>
         </div>
       </div>
 
