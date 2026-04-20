@@ -196,64 +196,84 @@
       position:relative;
     }
 
-    .visual-grid{
+    .hero-visual-layout{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
       align-items:stretch;
     }
 
-    .card-photo-large,
-    .card-photo-small,
-    .card-highlight{
+    .hero-visual-left,
+    .hero-visual-right{
+      display:flex;
+      flex-direction:column;
+    }
+
+    .hero-main-photo,
+    .hero-top-photo,
+    .hero-info-card{
       border-radius:28px;
       overflow:hidden;
       box-shadow:var(--shadow);
-      background:#fff;
+    }
+
+    .hero-main-photo{
+      min-height:520px;
       height:100%;
+      background:#fff;
     }
 
-    .card-photo-large img{
+    .hero-main-photo img{
       width:100%;
-      height:440px;
+      height:100%;
       object-fit:cover;
     }
 
-    .card-photo-small img{
-      width:100%;
+    .hero-visual-right{
+      gap:18px;
+    }
+
+    .hero-top-photo{
       height:220px;
+      background:#fff;
+    }
+
+    .hero-top-photo img{
+      width:100%;
+      height:100%;
       object-fit:cover;
     }
 
-    .card-highlight{
+    .hero-info-card{
       background:linear-gradient(145deg, var(--blue), var(--blue-dark));
       color:#fff;
       padding:28px;
-      min-height:204px;
+      min-height:282px;
       display:flex;
       flex-direction:column;
       justify-content:center;
     }
 
-    .card-highlight .mini{
+    .hero-info-card .mini{
       font-size:12px;
       text-transform:uppercase;
       letter-spacing:.28em;
       color:#dbeafe;
       font-weight:800;
+      margin-bottom:14px;
     }
 
-    .card-highlight h3{
-      margin:14px 0 0;
-      font-size:38px;
-      line-height:1.05;
+    .hero-info-card h3{
+      margin:0;
+      font-size:32px;
+      line-height:1.08;
     }
 
-    .card-highlight p{
-      margin:14px 0 0;
-      color:#eff6ff;
+    .hero-info-card p{
+      margin:16px 0 0;
       font-size:17px;
-      line-height:1.7;
+      line-height:1.75;
+      color:#eff6ff;
     }
 
     .section{
@@ -629,6 +649,22 @@
       .section h2{
         font-size:44px;
       }
+
+      .hero-visual-layout{
+        grid-template-columns:1fr;
+      }
+
+      .hero-main-photo{
+        min-height:360px;
+      }
+
+      .hero-top-photo{
+        height:240px;
+      }
+
+      .hero-info-card{
+        min-height:auto;
+      }
     }
 
     @media (max-width: 760px){
@@ -670,18 +706,6 @@
       .stats-grid,
       .cards-grid{
         grid-template-columns:1fr;
-      }
-
-      .visual-grid{
-        grid-template-columns:1fr;
-      }
-
-      .card-photo-large img{
-        height:280px;
-      }
-
-      .card-photo-small img{
-        height:220px;
       }
 
       .stat-card{
@@ -760,20 +784,26 @@
       </div>
 
       <div class="hero-visual">
-        <div class="visual-grid">
-          <div class="card-photo-large">
-            <img src="skytogohero1.png" alt="Jeunes togolais en tenue professionnelle" />
-          </div>
-          <div>
-            <div class="card-photo-small">
+        <div class="hero-visual-layout">
+          <div class="hero-visual-left">
+            <div class="hero-main-photo">
               <img src="skytogohero2.png" alt="Jeunes togolais sur un campus" />
             </div>
-            <div class="card-highlight" style="margin-top:16px;">
+          </div>
+
+          <div class="hero-visual-right">
+            <div class="hero-top-photo">
+              <img src="skytogohero1.png" alt="Jeunes togolais en tenue professionnelle" />
+            </div>
+
+            <div class="hero-info-card">
               <div class="mini">Spécificité du Togo</div>
               <h3>Un programme qui relie bien-être, employabilité et entrepreneuriat.</h3>
               <p>
-                Une approche concrète pour aider les jeunes à gagner en stabilité intérieure
-                et à construire de vraies perspectives d’avenir.
+                Au Togo, SKY Campus met en avant une approche adaptée aux réalités sociales
+                et économiques des jeunes. Le programme aide à mieux gérer le stress,
+                à renforcer la confiance en soi et à développer des compétences utiles
+                pour l’avenir professionnel, l’employabilité et l’initiative entrepreneuriale.
               </p>
             </div>
           </div>
