@@ -6,7 +6,7 @@
   <title>YLTP Togo – PIJE / LTE</title>
   <meta
     name="description"
-    content="YLTP Togo : un programme innovant pour aider les jeunes à développer leur autonomie, leur employabilité, leur leadership et leur capacité à entreprendre."
+    content="YLTP Togo : un programme pour aider les jeunes à générer des revenus, développer leur autonomie, leur leadership et leur capacité à entreprendre."
   />
   <style>
     :root{
@@ -184,10 +184,10 @@
 
     .hero h1{
       margin:0;
-      font-size:76px;
-      line-height:.95;
+      font-size:72px;
+      line-height:.96;
       letter-spacing:-2px;
-      max-width:760px;
+      max-width:780px;
     }
 
     .hero h1 .accent{color:var(--orange)}
@@ -196,7 +196,7 @@
       margin:24px 0 0;
       font-size:20px;
       color:var(--muted);
-      max-width:740px;
+      max-width:760px;
       line-height:1.75;
     }
 
@@ -309,12 +309,12 @@
       font-size:56px;
       line-height:1.03;
       letter-spacing:-1.4px;
-      max-width:950px;
+      max-width:980px;
     }
 
     .section .lead{
       margin-top:18px;
-      max-width:860px;
+      max-width:880px;
       color:var(--muted);
       font-size:20px;
       line-height:1.9;
@@ -336,7 +336,9 @@
 
     .stats-grid,
     .cards-grid,
-    .testimonial-grid{
+    .testimonial-grid,
+    .pitch-grid,
+    .income-grid{
       display:grid;
       gap:20px;
       margin-top:34px;
@@ -354,11 +356,21 @@
       grid-template-columns:repeat(3,1fr);
     }
 
+    .pitch-grid{
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .income-grid{
+      grid-template-columns:repeat(3,1fr);
+    }
+
     .stat-card,
     .info-card,
     .testimonial-card,
     .faq-item,
-    .panel{
+    .panel,
+    .pitch-card,
+    .income-card{
       background:#fff;
       border:1px solid var(--line);
       border-radius:28px;
@@ -397,7 +409,9 @@
       flex-direction:column;
     }
 
-    .info-card:hover{
+    .info-card:hover,
+    .pitch-card:hover,
+    .income-card:hover{
       transform:translateY(-3px);
       box-shadow:0 18px 40px rgba(15,23,42,.10);
     }
@@ -407,14 +421,18 @@
       margin-bottom:18px;
     }
 
-    .info-card h3{
+    .info-card h3,
+    .pitch-card h3,
+    .income-card h3{
       margin:0;
       font-size:22px;
       line-height:1.2;
       min-height:54px;
     }
 
-    .info-card p{
+    .info-card p,
+    .pitch-card p,
+    .income-card p{
       margin:14px 0 0;
       color:#5b6472;
       line-height:1.8;
@@ -504,6 +522,42 @@
       color:#64748b;
       font-size:15px;
       font-weight:600;
+    }
+
+    .pitch-card{
+      padding:28px 24px;
+      min-height:180px;
+      background:linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+    }
+
+    .pitch-card .quote{
+      font-size:30px;
+      color:var(--orange);
+      font-weight:800;
+      line-height:1;
+      margin-bottom:12px;
+    }
+
+    .income-card{
+      padding:28px 24px;
+      min-height:230px;
+    }
+
+    .income-card .amount{
+      display:block;
+      font-size:34px;
+      font-weight:800;
+      color:var(--orange-dark);
+      margin:10px 0 8px;
+      line-height:1;
+    }
+
+    .income-card .small{
+      font-size:13px;
+      color:#64748b;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.14em;
     }
 
     .faq-list{
@@ -649,7 +703,9 @@
       }
 
       .stats-grid,
-      .cards-grid{
+      .cards-grid,
+      .pitch-grid,
+      .income-grid{
         grid-template-columns:repeat(2,1fr);
       }
 
@@ -719,7 +775,9 @@
       }
 
       .stats-grid,
-      .cards-grid{
+      .cards-grid,
+      .pitch-grid,
+      .income-grid{
         grid-template-columns:1fr;
       }
 
@@ -728,7 +786,9 @@
       }
 
       .info-card,
-      .testimonial-card{
+      .testimonial-card,
+      .pitch-card,
+      .income-card{
         min-height:auto;
       }
 
@@ -750,14 +810,14 @@
         <img src="./logo.png" alt="YLTP Togo">
         <div class="brand-text">
           <strong>YLTP Togo</strong>
-          <span>PIJE • LTE • autonomisation des jeunes</span>
+          <span>PIJE • LTE • revenus • leadership • autonomie</span>
         </div>
       </div>
 
       <nav class="nav">
         <a href="#programme">Programme</a>
-        <a href="#autonomisation">Autonomisation</a>
-        <a href="#temoignages">Témoignages</a>
+        <a href="#revenus">Revenus</a>
+        <a href="#pitchs">Rejoindre</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -770,30 +830,31 @@
       <div>
         <div class="badges">
           <span class="badge">Programme pour les 16–35 ans</span>
-          <span class="badge">Lomé • emploi • initiative • leadership</span>
+          <span class="badge">Lomé • revenus • initiative • leadership</span>
         </div>
 
         <h1>
-          Génère des revenus.<br>
+          Gagne de l’argent.<br>
           Développe ton leadership.<br>
-          <span class="accent">Construis ton avenir.</span>
+          <span class="accent">Commence maintenant.</span>
         </h1>
 
         <p>
-          YLTP Togo est un programme d’autonomisation inspiré du PIJE et du LTE.
-          Il aide les jeunes à développer leur stabilité intérieure, leur capacité d’action,
-          leur employabilité, leur sens des responsabilités et leur esprit d’entreprendre.
+          YLTP Togo aide les jeunes à générer des revenus grâce à la vente de produits simples
+          et utiles, tout en développant leur confiance, leur discipline, leur capacité d’action
+          et leur esprit d’entreprendre. Ici, tu ne viens pas seulement écouter :
+          tu viens apprendre, tester, vendre et progresser.
         </p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">Remplir le questionnaire</a>
-          <a class="btn btn-secondary" href="#programme">Découvrir le programme</a>
+          <a class="btn btn-secondary" href="#revenus">Voir les opportunités</a>
         </div>
 
         <div class="hero-tags">
+          <span class="badge">Revenus</span>
+          <span class="badge">Produits concrets</span>
           <span class="badge">Autonomie</span>
-          <span class="badge">Emploi</span>
-          <span class="badge">Entrepreneuriat</span>
           <span class="badge">Leadership</span>
         </div>
       </div>
@@ -812,12 +873,12 @@
             </div>
 
             <div class="hero-info-card">
-              <div class="mini">Positionnement</div>
-              <h3>Un programme qui relie facteur intérieur, employabilité et action concrète.</h3>
+              <div class="mini">Ce que nous proposons</div>
+              <h3>Des produits à vendre. Une marge à gagner. Une vraie montée en puissance.</h3>
               <p>
-                L’objectif n’est pas seulement le bien-être. L’objectif est de permettre aux jeunes
-                de devenir plus autonomes mentalement, financièrement et socialement,
-                afin de mieux accéder à l’emploi, à la formation ou à l’entrepreneuriat.
+                Nous identifions des produits demandés, nous les mettons à disposition à bon prix,
+                et nous aidons les jeunes à les revendre avec une marge. Le revenu devient un point
+                de départ vers plus d’autonomie, de confiance et de responsabilité.
               </p>
             </div>
           </div>
@@ -829,8 +890,9 @@
   <section class="section section-light">
     <div class="container">
       <p class="stats-note">
-        Les chiffres ci-dessous reflètent l’expérience et l’impact de programmes internationaux partenaires.
-        Ils ne correspondent pas aux seuls résultats du déploiement au Togo.
+        Le programme combine opportunités économiques concrètes, accompagnement humain
+        et montée en responsabilité. Les chiffres ci-dessous reflètent l’expérience
+        de programmes internationaux partenaires.
       </p>
 
       <div class="stats-grid">
@@ -857,115 +919,196 @@
   <section id="programme" class="section section-light">
     <div class="container">
       <p class="eyebrow">Le programme</p>
-      <h2>Un parcours pour remettre les jeunes en posture d’action</h2>
+      <h2>Un parcours pour aider les jeunes à vendre, gagner et se transformer</h2>
       <p class="lead">
-        YLTP Togo s’adresse aux jeunes qui veulent retrouver de l’élan, mieux se structurer,
-        renforcer leur confiance, apprendre à se présenter, travailler en équipe,
-        développer leur projet et mieux tirer parti des dispositifs d’emploi,
-        d’insertion ou d’entrepreneuriat.
+        YLTP Togo s’adresse aux jeunes qui veulent commencer une activité simple,
+        développer leur autonomie financière, apprendre à se présenter,
+        prendre des responsabilités et construire un avenir plus solide.
       </p>
 
       <div class="cards-grid">
         <div class="info-card">
           <div class="icon">💼</div>
-          <h3>Employabilité</h3>
+          <h3>Vendre des produits utiles</h3>
           <p>
-            Apprends à mieux te présenter, à prendre la parole, à clarifier ton projet
-            et à te mettre dans de meilleures conditions pour l’emploi ou la formation.
+            Riz, boissons, produits du quotidien, articles simples à forte demande :
+            nous partons de produits concrets qui se revendent facilement.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">💰</div>
+          <h3>Générer une marge</h3>
+          <p>
+            L’idée est simple : acheter à bon prix, revendre autour de soi
+            et garder une marge. Le but est de créer un premier revenu réel.
           </p>
         </div>
         <div class="info-card">
           <div class="icon">🚀</div>
-          <h3>Leadership</h3>
+          <h3>Prendre confiance</h3>
           <p>
-            Développe ton sens des responsabilités, ta capacité à agir en groupe,
-            à coopérer et à porter une initiative utile.
+            Quand un jeune commence à vendre, à parler à des clients et à gagner ses premiers revenus,
+            sa posture change immédiatement.
           </p>
         </div>
         <div class="info-card">
-          <div class="icon">🧠</div>
-          <h3>Facteur intérieur</h3>
+          <div class="icon">👥</div>
+          <h3>Devenir leader</h3>
           <p>
-            Travaille sur la clarté mentale, la gestion du stress, la stabilité émotionnelle,
-            la confiance en soi et la capacité à passer à l’action.
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">📈</div>
-          <h3>Autonomisation</h3>
-          <p>
-            L’objectif central est de devenir plus autonome : dans ta tête,
-            dans tes choix, dans ta vie professionnelle et dans ta capacité à construire ton avenir.
+            Le programme aide ensuite à devenir plus responsable, plus organisé,
+            plus discipliné et capable d’aider d’autres jeunes à avancer.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="autonomisation" class="section section-soft">
-    <div class="container split">
-      <div>
-        <p class="eyebrow">Autonomie, insertion, entrepreneuriat</p>
-        <h2>Au Togo, nous partons de la réalité des jeunes</h2>
-        <p class="lead">
-          Beaucoup de jeunes affrontent simultanément pression économique, manque de repères,
-          stress, doute sur l’avenir et difficulté à se projeter. C’est pourquoi YLTP Togo
-          relie le renforcement intérieur à l’employabilité, à l’initiative et à la création d’opportunités.
-        </p>
+  <section id="revenus" class="section section-soft">
+    <div class="container">
+      <p class="eyebrow">Produits & revenus</p>
+      <h2>Des opportunités de vente simples, concrètes et adaptées au terrain</h2>
+      <p class="lead">
+        Nous voulons mettre à disposition des produits utiles et demandés à Lomé,
+        afin que les jeunes puissent commencer petit, revendre rapidement et générer
+        un revenu complémentaire sans attendre un emploi.
+      </p>
 
-        <div class="panel" style="margin-top:22px;">
-          <h3>Une logique de progression</h3>
+      <div class="income-grid">
+        <div class="income-card">
+          <div class="small">Exemple 1</div>
+          <h3>Riz reconditionné</h3>
+          <span class="amount">+100 à +150 FCFA / kg</span>
           <p>
-            Le parcours commence par la sensibilisation et la mobilisation, puis va vers
-            l’approfondissement, l’autonomie, le leadership, l’action collective
-            et l’accompagnement vers l’emploi, la formation ou le projet.
+            Achat en gros, reconditionnement en petits formats, revente dans le quartier,
+            sur le campus ou auprès de proches. Produit simple, utile et à forte rotation.
           </p>
         </div>
 
-        <div class="panel panel-note" style="margin-top:18px;">
-          <strong>Ce que nous proposons</strong>
+        <div class="income-card">
+          <div class="small">Exemple 2</div>
+          <h3>Jus naturels</h3>
+          <span class="amount">Marge possible x2 à x5</span>
           <p>
-            Un cadre exigeant, humain et structurant pour aider les jeunes à mieux se connaître,
-            développer leurs aptitudes personnelles, renforcer leur discipline,
-            mieux coopérer et retrouver une vraie capacité d’initiative.
+            Bissap, gingembre, canne à sucre : des produits visibles, demandés
+            et intéressants pour générer du cash rapidement, surtout dans les zones étudiantes.
+          </p>
+        </div>
+
+        <div class="income-card">
+          <div class="small">Exemple 3</div>
+          <h3>Produits du quotidien</h3>
+          <span class="amount">Petits gains, rotation rapide</span>
+          <p>
+            Eau, savon, snacks, accessoires téléphone, petits articles utiles :
+            des ventes simples qui permettent de se lancer sans complexité.
           </p>
         </div>
       </div>
 
-      <div>
-        <div class="cards-grid" style="grid-template-columns:1fr 1fr; margin-top:0;">
-          <div class="info-card">
-            <h3>Savoir se présenter</h3>
+      <div class="split" style="margin-top:34px;">
+        <div>
+          <div class="panel">
+            <h3>Comment cela fonctionne ?</h3>
             <p>
-              Travail sur la posture, la parole, la présentation de soi
-              et la capacité à convaincre avec plus de clarté.
+              Nous identifions des produits faciles à vendre. Nous les achetons en gros.
+              Ensuite, nous les proposons à des jeunes à un prix très proche du prix de gros,
+              afin qu’ils puissent eux-mêmes revendre avec une marge intéressante.
             </p>
           </div>
-          <div class="info-card">
-            <h3>Travailler en équipe</h3>
+
+          <div class="panel panel-note" style="margin-top:18px;">
+            <strong>Important</strong>
             <p>
-              Jeux collectifs, coopération, prise de responsabilités
-              et capacité à prendre sa place dans un groupe.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3>Conserver son engagement</h3>
-            <p>
-              Apprendre à tenir dans le temps, à rester stable
-              et à poursuivre un projet avec sérieux.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3>Passer à l’action</h3>
-            <p>
-              Transformer le potentiel en décisions, en projets,
-              en action utile et en opportunités concrètes.
+              Les revenus dépendent du produit choisi, du volume vendu, de la motivation
+              et de la régularité de chacun. Nous ne promettons pas un revenu garanti :
+              nous proposons une vraie opportunité de démarrage.
             </p>
           </div>
         </div>
 
-        <div class="photo-box">
-          <img src="skytogohero3.png" alt="Jeunes togolais en dynamique de groupe" />
+        <div>
+          <div class="cards-grid" style="grid-template-columns:1fr 1fr; margin-top:0;">
+            <div class="info-card">
+              <h3>Commencer petit</h3>
+              <p>
+                Même avec peu de moyens, il est possible de tester une première vente
+                et de construire progressivement quelque chose de sérieux.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>Vendre autour de soi</h3>
+              <p>
+                Amis, voisins, étudiants, quartier, campus : on commence par les réseaux proches
+                avant de grandir.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>Apprendre par l’action</h3>
+              <p>
+                On progresse en vendant, en parlant, en osant, en corrigeant et en recommençant.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>Monter en responsabilité</h3>
+              <p>
+                Les plus réguliers peuvent ensuite aider d’autres jeunes, recruter,
+                organiser et devenir leaders.
+              </p>
+            </div>
+          </div>
+
+          <div class="photo-box">
+            <img src="skytogohero3.png" alt="Jeunes togolais en dynamique de groupe" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pitchs" class="section section-light">
+    <div class="container">
+      <p class="eyebrow">Pourquoi nous rejoindre ?</p>
+      <h2>Des phrases simples qui parlent à la réalité des jeunes</h2>
+      <p class="lead">
+        YLTP Togo veut parler vrai. Pas de promesses vagues. Pas de long discours.
+        Une opportunité simple, un cadre sérieux, un accompagnement concret.
+      </p>
+
+      <div class="pitch-grid">
+        <div class="pitch-card">
+          <div class="quote">“</div>
+          <h3>Commence maintenant</h3>
+          <p>Tu peux commencer à gagner de l’argent dès cette semaine.</p>
+        </div>
+
+        <div class="pitch-card">
+          <div class="quote">“</div>
+          <h3>Teste sans attendre</h3>
+          <p>Même avec peu de moyens, tu peux lancer ton petit business.</p>
+        </div>
+
+        <div class="pitch-card">
+          <div class="quote">“</div>
+          <h3>Apprends en vendant</h3>
+          <p>C’est simple : tu achètes, tu revends, tu gardes ta marge.</p>
+        </div>
+
+        <div class="pitch-card">
+          <div class="quote">“</div>
+          <h3>Deviens autonome</h3>
+          <p>Ne dépends plus seulement d’un emploi hypothétique pour avancer.</p>
+        </div>
+
+        <div class="pitch-card">
+          <div class="quote">“</div>
+          <h3>Avance avec sérieux</h3>
+          <p>Ce n’est pas du blabla : c’est une opportunité concrète pour les motivés.</p>
+        </div>
+
+        <div class="pitch-card">
+          <div class="quote">“</div>
+          <h3>Rejoins un réseau</h3>
+          <p>Tu n’es pas seul : tu progresses avec d’autres jeunes qui veulent réussir.</p>
         </div>
       </div>
     </div>
@@ -993,8 +1136,8 @@
           <div class="icon">💰</div>
           <h3>Autonomie financière</h3>
           <p>
-            Mieux se préparer à l’emploi, à l’activité économique,
-            à la recherche d’opportunités et aux initiatives personnelles.
+            Apprendre à générer un revenu, à gérer une petite activité
+            et à créer des opportunités concrètes autour de soi.
           </p>
         </div>
         <div class="info-card">
@@ -1009,8 +1152,8 @@
           <div class="icon">🌍</div>
           <h3>Impact local</h3>
           <p>
-            Encourager des projets citoyens, sociaux ou entrepreneuriaux
-            utiles pour le quartier, la ville ou le pays.
+            Encourager des projets utiles pour le quartier, la ville ou le pays,
+            et bâtir une jeunesse plus forte.
           </p>
         </div>
       </div>
@@ -1020,10 +1163,10 @@
   <section id="temoignages" class="section section-blue">
     <div class="container">
       <p class="eyebrow">Témoignages</p>
-      <h2>Des retours d’expérience sur la confiance, la clarté et le passage à l’action</h2>
+      <h2>Des retours sur la confiance, la clarté et le passage à l’action</h2>
       <p class="lead">
-        Les participants témoignent d’un meilleur ancrage, d’une plus grande confiance
-        en eux, d’une meilleure productivité et d’une plus grande clarté mentale.
+        Le programme aide à gagner en confiance, à mieux se concentrer
+        et à passer plus facilement à l’action.
       </p>
 
       <div class="testimonial-grid">
@@ -1073,35 +1216,34 @@
           <summary>À qui s’adresse le programme ?</summary>
           <p>
             Aux jeunes de 16 à 35 ans qui veulent développer leur autonomie,
-            leur employabilité, leur leadership et leur capacité à entreprendre.
+            leur capacité à vendre, leur leadership et leur esprit d’initiative.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>Est-ce un programme de bien-être uniquement ?</summary>
+          <summary>Qu’allons-nous vendre ?</summary>
           <p>
-            Non. Le bien-être et la gestion du stress sont des leviers.
-            Le but global est l’autonomisation, l’employabilité,
-            l’engagement et le passage à l’action.
+            Des produits simples, utiles et demandés : selon les disponibilités,
+            il peut s’agir de riz, de boissons, de produits du quotidien
+            ou d’autres articles faciles à revendre.
           </p>
         </details>
 
         <details class="faq-item">
-          <summary>Le programme garantit-il un emploi ?</summary>
+          <summary>Le programme garantit-il un revenu ?</summary>
           <p>
-            Non. Le programme ne garantit pas un emploi.
-            Il aide les jeunes à développer des ressources intérieures
-            et des compétences utiles pour mieux avancer vers l’emploi,
-            la formation ou l’entrepreneuriat.
+            Non. Le programme ne garantit pas un revenu fixe.
+            Il propose des produits, un cadre, un accompagnement et une opportunité concrète.
+            Les résultats dépendent ensuite de l’engagement personnel.
           </p>
         </details>
 
         <details class="faq-item">
           <summary>Pourquoi parler de facteur intérieur ?</summary>
           <p>
-            Parce que la confiance, la stabilité émotionnelle, la clarté mentale,
-            la discipline et la capacité à agir influencent directement la manière
-            dont une personne utilise les opportunités extérieures.
+            Parce que la confiance, la stabilité émotionnelle, la discipline
+            et la capacité à agir influencent directement la manière dont une personne vend,
+            persévère et utilise les opportunités extérieures.
           </p>
         </details>
 
@@ -1122,11 +1264,11 @@
         <div class="cta-grid">
           <div class="cta-content">
             <p class="eyebrow" style="color:#fed7aa;">Passe à l’action</p>
-            <h2>Entre dans un parcours d’autonomisation</h2>
+            <h2>Rejoins un programme qui te fait avancer pour de vrai</h2>
             <p>
-              Si tu veux développer ta stabilité, ton sens des responsabilités,
-              ta confiance, ton employabilité et ta capacité à entreprendre,
-              remplis le questionnaire.
+              Si tu veux vendre, générer un revenu, développer ta confiance,
+              mieux te structurer et entrer dans une dynamique de leadership,
+              remplis le questionnaire maintenant.
             </p>
           </div>
 
@@ -1135,7 +1277,7 @@
             <h3>Candidate dès maintenant</h3>
             <p>
               Remplis ce court formulaire pour nous permettre de mieux
-              comprendre ton profil et te recontacter.
+              comprendre ton profil et te recontacter rapidement.
             </p>
             <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
               Remplir le questionnaire
