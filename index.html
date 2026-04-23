@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YLTP Togo – PIJE</title>
-<meta
-  name="description"
-  content="YLTP Togo (Youth Leadership Training Program), en français Programme Innovant pour une Jeunesse Entreprenante (PIJE), aide les jeunes à générer des revenus, développer leur leadership, mieux gérer leur stress et renforcer leur bien-être mental."
-/>
+  <meta
+    name="description"
+    content="YLTP Togo (Youth Leadership Training Program), en français Programme Innovant pour une Jeunesse Entreprenante (PIJE), aide les jeunes à générer des revenus, développer leur leadership, mieux gérer leur stress et renforcer leur bien-être mental."
+  />
   <style>
     :root{
       --blue:#2f80ed;
@@ -65,6 +65,7 @@
       align-items:center;
       gap:16px;
       min-width:0;
+      flex-wrap:wrap;
     }
 
     .brand img{
@@ -75,8 +76,16 @@
       padding:4px;
     }
 
+    .brand .iahv-logo{
+      height:76px;
+      width:auto;
+      background:#fff;
+      border-radius:14px;
+      padding:4px;
+    }
+
     .brand-text{
-      max-width:380px;
+      max-width:420px;
     }
 
     .brand-text strong{
@@ -329,7 +338,7 @@
       color:#6b7280;
       font-size:14px;
       margin-bottom:20px;
-      max-width:820px;
+      max-width:860px;
       margin-left:auto;
       margin-right:auto;
     }
@@ -666,10 +675,19 @@
       display:flex;
       align-items:center;
       gap:12px;
+      flex-wrap:wrap;
     }
 
     .footer-brand img{
       height:55px;
+      width:auto;
+      border-radius:12px;
+      background:#fff;
+      padding:4px;
+    }
+
+    .footer-brand .iahv-logo-footer{
+      height:48px;
       width:auto;
       border-radius:12px;
       background:#fff;
@@ -751,6 +769,10 @@
         height:76px;
       }
 
+      .brand .iahv-logo{
+        height:62px;
+      }
+
       .hero{
         padding-top:34px;
       }
@@ -807,12 +829,12 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-  <img src="./logo.png" alt="YLTP Togo">
-  <img src="./iahv-logo.png" alt="IAHV" style="height:76px; width:auto; background:#fff; border-radius:14px; padding:4px;">
-  <div class="brand-text">
-  <strong>YLTP Togo</strong>
-  <span>Youth Leadership Training Program • en français : Programme Innovant pour une Jeunesse Entreprenante (PIJE)</span>
-</div>
+        <img src="./logo.png" alt="YLTP Togo">
+        <img src="./iahv-logo.png" alt="IAHV" class="iahv-logo">
+        <div class="brand-text">
+          <strong>YLTP Togo</strong>
+          <span>Youth Leadership Training Program • en français : Programme Innovant pour une Jeunesse Entreprenante (PIJE)</span>
+        </div>
       </div>
 
       <nav class="nav">
@@ -831,18 +853,19 @@
       <div>
         <div class="badges">
           <span class="badge">Programme pour les 16–35 ans</span>
-          <span class="badge">Lomé • revenus • initiative • leadership</span>
+          <span class="badge">Lomé • revenus • bien-être • leadership</span>
         </div>
 
-       <h1>
-  Génère des revenus.<br>
-  Renforce ta confiance.<br>
-  <span class="accent">Gère mieux ton stress.</span>
-</h1>
+        <h1>
+          Génère des revenus.<br>
+          Renforce ta confiance.<br>
+          <span class="accent">Gère mieux ton stress.</span>
+        </h1>
 
-<p>
-  YLTP Togo (Youth Leadership Training Program), appelé en français Programme Innovant pour une Jeunesse Entreprenante (PIJE), aide les jeunes à générer des revenus grâce à des opportunités concrètes de vente, tout en développant leur leadership, leur confiance, leur concentration et leur capacité à mieux gérer le stress. Le programme combine action terrain, bien-être, santé mentale, respiration, méditation et esprit d’initiative.
-</p>
+        <p>
+          YLTP Togo (Youth Leadership Training Program), appelé en français Programme Innovant pour une Jeunesse Entreprenante (PIJE), aide les jeunes à générer des revenus grâce à des opportunités concrètes de vente, tout en développant leur leadership, leur confiance, leur concentration et leur capacité à mieux gérer le stress. Le programme combine action terrain, bien-être, santé mentale, respiration, méditation et esprit d’initiative.
+        </p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">Remplir le questionnaire</a>
           <a class="btn btn-secondary" href="#revenus">Voir les opportunités</a>
@@ -850,8 +873,8 @@
 
         <div class="hero-tags">
           <span class="badge">Revenus</span>
-          <span class="badge">Produits concrets</span>
-          <span class="badge">Autonomie</span>
+          <span class="badge">Santé mentale</span>
+          <span class="badge">Respiration</span>
           <span class="badge">Leadership</span>
         </div>
       </div>
@@ -871,10 +894,10 @@
 
             <div class="hero-info-card">
               <div class="mini">YLTP / PIJE</div>
-<h3>Un programme qui relie revenus, leadership et bien-être intérieur.</h3>
-<p>
-  Nous aidons les jeunes à créer un premier revenu grâce à des produits simples à revendre, tout en leur donnant aussi des outils concrets de respiration, de méditation, de gestion du stress et de santé mentale pour avancer avec plus de clarté, de stabilité et de confiance.
-</p>
+              <h3>Un programme qui relie revenus, leadership et bien-être intérieur.</h3>
+              <p>
+                Nous aidons les jeunes à créer un premier revenu grâce à des produits simples à revendre, tout en leur donnant aussi des outils concrets de respiration, de méditation, de gestion du stress et de santé mentale pour avancer avec plus de clarté, de stabilité et de confiance.
+              </p>
             </div>
           </div>
         </div>
@@ -885,9 +908,7 @@
   <section class="section section-light">
     <div class="container">
       <p class="stats-note">
-        Le programme combine opportunités économiques concrètes, accompagnement humain
-        et montée en responsabilité. Les chiffres ci-dessous reflètent l’expérience
-        de programmes internationaux partenaires.
+        YLTP signifie Youth Leadership Training Program. En français, nous parlons de Programme Innovant pour une Jeunesse Entreprenante (PIJE). Le programme combine opportunités économiques concrètes, accompagnement humain, bien-être, santé mentale et montée en responsabilité. Les chiffres ci-dessous reflètent l’expérience de programmes internationaux partenaires.
       </p>
 
       <div class="stats-grid">
@@ -916,42 +937,40 @@
       <p class="eyebrow">Le programme</p>
       <h2>Un parcours pour aider les jeunes à vendre, gagner et se transformer</h2>
       <p class="lead">
-        YLTP Togo s’adresse aux jeunes qui veulent commencer une activité simple,
-        développer leur autonomie financière, apprendre à se présenter,
-        prendre des responsabilités et construire un avenir plus solide.
+        YLTP Togo s’adresse aux jeunes qui veulent commencer une activité simple, développer leur autonomie financière, apprendre à se présenter, prendre des responsabilités, mieux gérer leur stress et construire un avenir plus solide. Le programme associe développement personnel, santé mentale, respiration, méditation et opportunités concrètes de revenus.
       </p>
 
       <div class="cards-grid">
         <div class="info-card">
           <div class="icon">💼</div>
-          <h3>Vendre des produits utiles</h3>
+          <h3>Revenus concrets</h3>
           <p>
-            Riz, boissons, produits du quotidien, articles simples à forte demande :
-            nous partons de produits concrets qui se revendent facilement.
+            Apprends à vendre des produits simples et utiles, à créer une marge
+            et à commencer une activité génératrice de revenus.
           </p>
         </div>
         <div class="info-card">
-          <div class="icon">💰</div>
-          <h3>Générer une marge</h3>
+          <div class="icon">🧠</div>
+          <h3>Santé mentale et gestion du stress</h3>
           <p>
-            L’idée est simple : acheter à bon prix, revendre autour de soi
-            et garder une marge. Le but est de créer un premier revenu réel.
+            Développe des outils concrets pour mieux gérer la pression,
+            retrouver de la clarté mentale et avancer avec plus de stabilité.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🌬️</div>
+          <h3>Respiration et méditation</h3>
+          <p>
+            Le programme intègre des techniques de respiration et de méditation
+            pour renforcer l’énergie, l’attention et le calme intérieur.
           </p>
         </div>
         <div class="info-card">
           <div class="icon">🚀</div>
-          <h3>Prendre confiance</h3>
+          <h3>Leadership et autonomie</h3>
           <p>
-            Quand un jeune commence à vendre, à parler à des clients et à gagner ses premiers revenus,
-            sa posture change immédiatement.
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">👥</div>
-          <h3>Devenir leader</h3>
-          <p>
-            Le programme aide ensuite à devenir plus responsable, plus organisé,
-            plus discipliné et capable d’aider d’autres jeunes à avancer.
+            Prends confiance, apprends à agir, à mieux communiquer
+            et à devenir un appui pour d’autres jeunes autour de toi.
           </p>
         </div>
       </div>
@@ -963,9 +982,7 @@
       <p class="eyebrow">Produits & revenus</p>
       <h2>Des opportunités de vente simples, concrètes et adaptées au terrain</h2>
       <p class="lead">
-        Nous voulons mettre à disposition des produits utiles et demandés à Lomé,
-        afin que les jeunes puissent commencer petit, revendre rapidement et générer
-        un revenu complémentaire sans attendre un emploi.
+        Nous voulons mettre à disposition des produits utiles et demandés à Lomé, afin que les jeunes puissent commencer petit, revendre rapidement et générer un revenu complémentaire sans attendre un emploi. Cette dynamique économique s’accompagne aussi d’un travail sur la discipline, la confiance, le bien-être et la gestion du stress.
       </p>
 
       <div class="income-grid">
@@ -1016,7 +1033,8 @@
             <p>
               Les revenus dépendent du produit choisi, du volume vendu, de la motivation
               et de la régularité de chacun. Nous ne promettons pas un revenu garanti :
-              nous proposons une vraie opportunité de démarrage.
+              nous proposons une vraie opportunité de démarrage, accompagnée d’outils
+              de bien-être et de stabilité intérieure.
             </p>
           </div>
         </div>
@@ -1090,8 +1108,8 @@
 
         <div class="pitch-card">
           <div class="quote">“</div>
-          <h3>Deviens autonome</h3>
-          <p>Ne dépends plus seulement d’un emploi hypothétique pour avancer.</p>
+          <h3>Retrouve ton équilibre</h3>
+          <p>Tu peux aussi apprendre à mieux gérer ton stress et à retrouver plus de calme.</p>
         </div>
 
         <div class="pitch-card">
@@ -1112,7 +1130,7 @@
   <section class="section section-light">
     <div class="container">
       <p class="eyebrow">Approche globale</p>
-      <h2>Trois dimensions d’autonomisation</h2>
+      <h2>Trois dimensions : revenu, leadership et équilibre intérieur</h2>
       <p class="lead">
         Le programme vise une montée en puissance progressive de la personne,
         en travaillant à la fois l’autonomie mentale, financière et le leadership.
@@ -1120,35 +1138,35 @@
 
       <div class="cards-grid">
         <div class="info-card">
-          <div class="icon">🧭</div>
-          <h3>Autonomie mentale</h3>
-          <p>
-            Mieux gérer le stress, clarifier ses pensées, dépasser certains blocages
-            et reprendre la maîtrise de son énergie.
-          </p>
-        </div>
-        <div class="info-card">
           <div class="icon">💰</div>
           <h3>Autonomie financière</h3>
           <p>
-            Apprendre à générer un revenu, à gérer une petite activité
+            Apprendre à générer un revenu, à vendre avec sérieux
             et à créer des opportunités concrètes autour de soi.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🧘🏾</div>
+          <h3>Bien-être et stabilité</h3>
+          <p>
+            Mieux gérer le stress, apaiser le mental et renforcer
+            l’équilibre intérieur dans un contexte souvent difficile.
+          </p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🌬️</div>
+          <h3>Respiration et méditation</h3>
+          <p>
+            Utiliser des techniques simples de respiration et de méditation
+            pour retrouver énergie, attention et calme.
           </p>
         </div>
         <div class="info-card">
           <div class="icon">👥</div>
           <h3>Leadership</h3>
           <p>
-            Apprendre à prendre des responsabilités, à mener une action collective,
-            à contribuer et à inspirer.
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🌍</div>
-          <h3>Impact local</h3>
-          <p>
-            Encourager des projets utiles pour le quartier, la ville ou le pays,
-            et bâtir une jeunesse plus forte.
+            Apprendre à prendre des responsabilités, à inspirer,
+            à recruter et à faire grandir d’autres jeunes.
           </p>
         </div>
       </div>
@@ -1160,8 +1178,8 @@
       <p class="eyebrow">Témoignages</p>
       <h2>Des retours sur la confiance, la clarté et le passage à l’action</h2>
       <p class="lead">
-        Le programme aide à gagner en confiance, à mieux se concentrer
-        et à passer plus facilement à l’action.
+        Le programme aide à gagner en confiance, à mieux se concentrer,
+        à mieux gérer le stress et à passer plus facilement à l’action.
       </p>
 
       <div class="testimonial-grid">
@@ -1211,7 +1229,7 @@
           <summary>À qui s’adresse le programme ?</summary>
           <p>
             Aux jeunes de 16 à 35 ans qui veulent développer leur autonomie,
-            leur capacité à vendre, leur leadership et leur esprit d’initiative.
+            leur capacité à vendre, leur leadership, leur bien-être et leur esprit d’initiative.
           </p>
         </details>
 
@@ -1234,19 +1252,19 @@
         </details>
 
         <details class="faq-item">
-          <summary>Pourquoi parler de facteur intérieur ?</summary>
+          <summary>Pourquoi intégrer bien-être, respiration et méditation ?</summary>
           <p>
-            Parce que la confiance, la stabilité émotionnelle, la discipline
-            et la capacité à agir influencent directement la manière dont une personne vend,
-            persévère et utilise les opportunités extérieures.
+            Parce que les jeunes ont aussi besoin de mieux gérer leur stress, leur fatigue mentale,
+            leurs émotions et leur concentration. Le programme relie donc revenus concrets
+            et outils intérieurs pour avancer plus solidement.
           </p>
         </details>
 
         <details class="faq-item">
           <summary>Quel est le rôle de SKY Campus ?</summary>
           <p>
-            SKY Campus est ici un partenaire et une source d’inspiration,
-            au sein d’un positionnement plus large centré sur YLTP, PIJE et LTE.
+            SKY Campus est ici un partenaire et une source d’inspiration.
+            Le programme est porté par YLTP Togo, avec l’appui de l’IAHV.
           </p>
         </details>
       </div>
@@ -1262,7 +1280,7 @@
             <h2>Rejoins un programme qui te fait avancer pour de vrai</h2>
             <p>
               Si tu veux vendre, générer un revenu, développer ta confiance,
-              mieux te structurer et entrer dans une dynamique de leadership,
+              mieux te structurer, mieux gérer ton stress et entrer dans une dynamique de leadership,
               remplis le questionnaire maintenant.
             </p>
           </div>
@@ -1287,9 +1305,10 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="./logo.png" alt="YLTP Togo">
+        <img src="./iahv-logo.png" alt="IAHV" class="iahv-logo-footer">
         <div>
           <strong>YLTP Togo</strong>
-          <span>Avec SKY Campus comme partenaire</span>
+          <span>Programme porté par l’IAHV • Avec SKY Campus comme partenaire</span>
         </div>
       </div>
 
