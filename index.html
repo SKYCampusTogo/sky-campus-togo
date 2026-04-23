@@ -397,10 +397,16 @@
     .stats-grid,
     .cards-grid,
     .pitch-grid,
-    .income-grid,
-    .video-grid{
+    .income-grid{
       display:grid;
       gap:22px;
+      margin-top:36px;
+    }
+
+    .video-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
       margin-top:36px;
     }
 
@@ -408,7 +414,6 @@
     .cards-grid{grid-template-columns:repeat(4,1fr);}
     .pitch-grid{grid-template-columns:repeat(3,1fr);}
     .income-grid{grid-template-columns:repeat(3,1fr);}
-    .video-grid{grid-template-columns:repeat(3,1fr);}
 
     .stat-card,
     .info-card,
@@ -609,31 +614,68 @@
     }
 
     .video-card{
-      padding:30px 26px;
-      min-height:225px;
+      overflow:hidden;
+      transition:.22s ease;
       display:flex;
       flex-direction:column;
-      justify-content:space-between;
       background:linear-gradient(180deg, #fff 0%, #f8fbff 100%);
     }
 
-    .video-link{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      margin-top:18px;
-      padding:13px 18px;
-      border-radius:999px;
-      background:var(--blue-soft);
-      color:var(--blue-dark);
-      font-weight:800;
-      border:1px solid #cfe0fb;
-      box-shadow:var(--shadow-soft);
+    .video-thumb-link{
+      position:relative;
+      display:block;
+      aspect-ratio:16/9;
+      overflow:hidden;
+      background:#e5e7eb;
     }
 
-    .video-link:hover{
-      background:#dbeafe;
-      transform:translateY(-1px);
+    .video-thumb-link img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .35s ease;
+    }
+
+    .video-card:hover .video-thumb-link img{
+      transform:scale(1.04);
+    }
+
+    .video-play{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg, rgba(15,23,42,.08) 0%, rgba(15,23,42,.24) 100%);
+    }
+
+    .video-play span{
+      width:74px;
+      height:74px;
+      border-radius:50%;
+      background:rgba(255,255,255,.92);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      color:var(--blue-deep);
+      box-shadow:0 10px 30px rgba(15,23,42,.18);
+    }
+
+    .video-content{
+      padding:24px 24px 26px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .video-label{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--orange-dark);
     }
 
     .faq-list{
@@ -1126,54 +1168,69 @@
       <p class="eyebrow">Vidéos</p>
       <h2 class="section-title-premium">Découvrir des exemples et initiatives YLTP / PIJE en vidéo</h2>
       <p class="lead">
-        Clique sur une vidéo pour découvrir des exemples en Afrique et en France.
+        Clique directement sur une vignette pour ouvrir la vidéo ou la chaîne correspondante.
       </p>
 
       <div class="video-grid">
-        <div class="video-card">
-          <div>
-            <div class="icon">▶️</div>
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/@iahvsouthafrica" target="_blank" rel="noopener noreferrer">
+            <img src="./thumb-south-africa.jpg" alt="Chaîne YouTube IAHV Afrique du Sud">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <span class="video-label">Chaîne YouTube</span>
             <h3>Afrique du Sud</h3>
-            <p>Découvrir la chaîne YouTube IAHV South Africa.</p>
+            <p>Découvrir la chaîne IAHV South Africa et ses initiatives autour de la jeunesse, du leadership et du service.</p>
           </div>
-          <a class="video-link" href="https://www.youtube.com/@iahvsouthafrica" target="_blank" rel="noopener noreferrer">Voir la chaîne</a>
-        </div>
+        </article>
 
-        <div class="video-card">
-          <div>
-            <div class="icon">🎬</div>
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/@iahvkenya" target="_blank" rel="noopener noreferrer">
+            <img src="./thumb-kenya.jpg" alt="Chaîne YouTube IAHV Kenya">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <span class="video-label">Chaîne YouTube</span>
             <h3>Kenya</h3>
-            <p>Découvrir la chaîne YouTube IAHV Kenya.</p>
+            <p>Voir des exemples d’actions, d’organisation communautaire et de programmes portés au Kenya.</p>
           </div>
-          <a class="video-link" href="https://www.youtube.com/@iahvkenya" target="_blank" rel="noopener noreferrer">Voir la chaîne</a>
-        </div>
+        </article>
 
-        <div class="video-card">
-          <div>
-            <div class="icon">🌍</div>
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=sGzssorvfnA" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/sGzssorvfnA/hqdefault.jpg" alt="Vidéo YLTP Côte d’Ivoire">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <span class="video-label">Vidéo</span>
             <h3>Côte d’Ivoire</h3>
-            <p>Voir une vidéo de présentation liée au YLTP en Côte d’Ivoire.</p>
+            <p>Voir une présentation vidéo liée au YLTP en Côte d’Ivoire.</p>
           </div>
-          <a class="video-link" href="https://www.youtube.com/watch?v=sGzssorvfnA" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
-        </div>
+        </article>
 
-        <div class="video-card">
-          <div>
-            <div class="icon">🇫🇷</div>
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=cO10diqfODk" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/cO10diqfODk/hqdefault.jpg" alt="Vidéo PIJE France 2016">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <span class="video-label">Vidéo</span>
             <h3>France 2016</h3>
-            <p>Voir un exemple vidéo du PIJE en France.</p>
+            <p>Découvrir un exemple vidéo du programme en France.</p>
           </div>
-          <a class="video-link" href="https://www.youtube.com/watch?v=cO10diqfODk" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
-        </div>
+        </article>
 
-        <div class="video-card">
-          <div>
-            <div class="icon">🎓</div>
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=6qeHWK9tbyw&t=261s" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/6qeHWK9tbyw/hqdefault.jpg" alt="Vidéo PIJE France 2021">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <span class="video-label">Vidéo</span>
             <h3>France 2021</h3>
-            <p>Voir une autre vidéo du PIJE en France.</p>
+            <p>Voir une autre vidéo de présentation du programme en France.</p>
           </div>
-          <a class="video-link" href="https://www.youtube.com/watch?v=6qeHWK9tbyw&t=261s" target="_blank" rel="noopener noreferrer">Voir la vidéo</a>
-        </div>
+        </article>
       </div>
     </div>
   </section>
