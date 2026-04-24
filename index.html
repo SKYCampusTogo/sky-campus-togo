@@ -8,6 +8,7 @@
     name="description"
     content="YLTP Togo aide les jeunes et les étudiants à générer des revenus, développer leur leadership, mieux gérer leur stress et renforcer leur bien-être mental."
   />
+
   <style>
     :root{
       --blue:#2f80ed;
@@ -332,10 +333,6 @@
 
     .section-light{background:#fff}
     .section-soft{background:#fff8f1}
-    .section-blue{
-      background:linear-gradient(180deg, #2f80ed 0%, #1f5fb8 100%);
-      color:#fff;
-    }
 
     .eyebrow{
       display:inline-flex;
@@ -379,10 +376,6 @@
       line-height:1.95;
     }
 
-    .section-blue h2,
-    .section-blue .lead{color:#fff}
-    .section-blue .eyebrow{color:#fed7aa}
-
     .section-note{
       text-align:center;
       color:#6b7280;
@@ -397,11 +390,18 @@
     .stats-grid,
     .cards-grid,
     .pitch-grid,
-    .income-grid{
+    .income-grid,
+    .partners-grid{
       display:grid;
       gap:22px;
       margin-top:36px;
     }
+
+    .stats-grid{grid-template-columns:repeat(4,1fr);}
+    .cards-grid{grid-template-columns:repeat(4,1fr);}
+    .pitch-grid{grid-template-columns:repeat(3,1fr);}
+    .income-grid{grid-template-columns:repeat(3,1fr);}
+    .partners-grid{grid-template-columns:repeat(3,1fr);}
 
     .video-grid{
       display:grid;
@@ -410,18 +410,14 @@
       margin-top:36px;
     }
 
-    .stats-grid{grid-template-columns:repeat(4,1fr);}
-    .cards-grid{grid-template-columns:repeat(4,1fr);}
-    .pitch-grid{grid-template-columns:repeat(3,1fr);}
-    .income-grid{grid-template-columns:repeat(3,1fr);}
-
     .stat-card,
     .info-card,
     .faq-item,
     .panel,
     .pitch-card,
     .income-card,
-    .video-card{
+    .video-card,
+    .partner-card{
       background:#fff;
       border:1px solid rgba(219,227,238,.85);
       border-radius:30px;
@@ -466,7 +462,8 @@
     .info-card:hover,
     .pitch-card:hover,
     .income-card:hover,
-    .video-card:hover{
+    .video-card:hover,
+    .partner-card:hover{
       transform:translateY(-5px);
       box-shadow:0 24px 44px rgba(15,23,42,.12);
     }
@@ -488,7 +485,8 @@
     .info-card h3,
     .pitch-card h3,
     .income-card h3,
-    .video-card h3{
+    .video-card h3,
+    .partner-card h3{
       margin:0;
       font-size:24px;
       line-height:1.2;
@@ -500,7 +498,8 @@
     .info-card p,
     .pitch-card p,
     .income-card p,
-    .video-card p{
+    .video-card p,
+    .partner-card p{
       margin:14px 0 0;
       color:#5b6472;
       line-height:1.85;
@@ -677,96 +676,37 @@
       letter-spacing:.18em;
       color:var(--orange-dark);
     }
-.partners-section{
-  background:
-    radial-gradient(circle at top left, rgba(47,128,237,.10), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(249,115,22,.10), transparent 24%),
-    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-}
 
-.partners-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-  margin-top:40px;
-}
+    .partners-section{
+      background:
+        radial-gradient(circle at top left, rgba(47,128,237,.10), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(249,115,22,.10), transparent 24%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
 
-.partner-card{
-  background:rgba(255,255,255,.92);
-  border:1px solid rgba(219,227,238,.9);
-  border-radius:34px;
-  box-shadow:var(--shadow);
-  padding:34px 28px;
-  transition:.22s ease;
-  position:relative;
-  overflow:hidden;
-}
+    .partner-card{
+      padding:30px 26px;
+      transition:.22s ease;
+      background:linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+    }
 
-.partner-card:before{
-  content:"";
-  position:absolute;
-  top:-70px;
-  right:-70px;
-  width:150px;
-  height:150px;
-  background:rgba(249,115,22,.08);
-  border-radius:50%;
-}
+    .partner-logo{
+      height:64px;
+      width:auto;
+      object-fit:contain;
+      margin-bottom:18px;
+    }
 
-.partner-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 28px 52px rgba(15,23,42,.14);
-}
+    .partner-tag{
+      display:inline-block;
+      margin-top:14px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--orange-dark);
+    }
 
-.partner-logo{
-  height:70px;
-  width:auto;
-  max-width:180px;
-  object-fit:contain;
-  margin-bottom:22px;
-  position:relative;
-  z-index:1;
-}
-
-.partner-card h3{
-  margin:0;
-  font-size:30px;
-  line-height:1.1;
-  color:var(--blue-deep);
-  letter-spacing:-.8px;
-  position:relative;
-  z-index:1;
-}
-
-.partner-card p{
-  margin:16px 0 0;
-  color:#5b6472;
-  line-height:1.85;
-  font-size:16px;
-  position:relative;
-  z-index:1;
-}
-
-.partner-tag{
-  display:inline-block;
-  margin-top:20px;
-  padding:9px 14px;
-  border-radius:999px;
-  background:var(--orange-soft);
-  color:var(--orange-dark);
-  font-size:12px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  position:relative;
-  z-index:1;
-}
-
-@media (max-width:1080px){
-  .partners-grid{
-    grid-template-columns:1fr;
-  }
-}
     .faq-list{
       margin-top:36px;
       display:grid;
@@ -914,7 +854,7 @@
       font-weight:600;
     }
 
-    @media (max-width: 1080px){
+    @media (max-width:1080px){
       .hero-grid,
       .split,
       .cta-grid{
@@ -925,7 +865,8 @@
       .cards-grid,
       .pitch-grid,
       .income-grid,
-      .video-grid{
+      .video-grid,
+      .partners-grid{
         grid-template-columns:repeat(2,1fr);
       }
 
@@ -941,7 +882,7 @@
       .hero-info-card{min-height:auto;}
     }
 
-    @media (max-width: 760px){
+    @media (max-width:760px){
       .nav{display:none;}
 
       .topbar-inner{
@@ -974,7 +915,8 @@
       .cards-grid,
       .pitch-grid,
       .income-grid,
-      .video-grid{
+      .video-grid,
+      .partners-grid{
         grid-template-columns:1fr;
       }
 
@@ -983,7 +925,8 @@
       .info-card,
       .pitch-card,
       .income-card,
-      .video-card{
+      .video-card,
+      .partner-card{
         min-height:auto;
       }
 
@@ -992,6 +935,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header class="topbar">
@@ -1011,10 +955,13 @@
         <a href="#revenus">Revenus</a>
         <a href="#videos">Vidéos</a>
         <a href="#pitchs">Rejoindre</a>
+        <a href="#partenaires">Partenaires</a>
         <a href="#faq">FAQ</a>
       </nav>
 
-      <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">Remplir le questionnaire</a>
+      <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
+        Remplir le questionnaire
+      </a>
     </div>
   </header>
 
@@ -1037,7 +984,9 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">Remplir le questionnaire</a>
+          <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
+            Remplir le questionnaire
+          </a>
           <a class="btn btn-secondary" href="#revenus">Voir les opportunités</a>
         </div>
 
@@ -1075,7 +1024,7 @@
     </div>
   </section>
 
-  <section class="section section-light">
+    <section class="section section-light">
     <div class="container">
       <p class="section-note">
         YLTP existe depuis 1996. Cela représente aujourd’hui 30 ans d’expérience au service de la jeunesse, du leadership, du bien-être, de l’engagement et du passage à l’action.
@@ -1102,441 +1051,93 @@
     </div>
   </section>
 
+  <!-- PROGRAMME -->
   <section id="programme" class="section section-light">
     <div class="container">
       <p class="eyebrow">Le programme</p>
       <h2 class="section-title-premium">Un parcours pour soutenir les jeunes à générer un revenu et se transformer</h2>
       <p class="lead">
-        YLTP Togo s’adresse aux jeunes qui veulent développer leur autonomie financière, prendre des responsabilités, mieux gérer leur stress et construire un avenir plus solide. Le programme associe développement personnel, santé mentale, respiration, méditation et opportunités concrètes de revenus.
+        YLTP Togo associe revenus, leadership, santé mentale, respiration et passage à l’action.
       </p>
 
       <div class="cards-grid">
         <div class="info-card">
           <div class="icon">💼</div>
           <h3>Revenus concrets</h3>
-          <p>
-            Apprends à vendre des produits simples et utiles, à créer une marge
-            et à commencer une activité génératrice de revenus.
-          </p>
+          <p>Apprends à vendre et générer un revenu.</p>
         </div>
         <div class="info-card">
           <div class="icon">🧠</div>
-          <h3>Santé mentale et gestion du stress</h3>
-          <p>
-            Développe des outils concrets pour mieux gérer la pression,
-            retrouver de la clarté mentale et avancer avec plus de stabilité.
-          </p>
+          <h3>Santé mentale</h3>
+          <p>Apprends à mieux gérer ton stress.</p>
         </div>
         <div class="info-card">
           <div class="icon">🌬️</div>
-          <h3>Respiration et méditation</h3>
-          <p>
-            Le programme intègre des techniques de respiration et de méditation
-            pour renforcer l’énergie, l’attention et le calme intérieur.
-          </p>
+          <h3>Respiration</h3>
+          <p>Développe ton énergie et ton calme intérieur.</p>
         </div>
         <div class="info-card">
           <div class="icon">🚀</div>
-          <h3>Leadership et autonomie</h3>
-          <p>
-            Prends confiance, apprends à agir, à mieux communiquer
-            et à devenir un appui pour d’autres jeunes autour de toi.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="revenus" class="section section-soft">
-    <div class="container">
-      <p class="eyebrow">Produits & revenus</p>
-      <h2 class="section-title-premium">Des opportunités de vente simples, concrètes et compatibles avec les études</h2>
-      <p class="lead">
-        Le programme s’adresse aussi aux étudiants. Nous savons qu’ils ont déjà leurs cours, leurs examens et leurs responsabilités académiques. L’idée n’est pas d’arrêter les études, mais de montrer qu’en consacrant plusieurs heures par semaine à une activité simple de vente, ils peuvent générer un revenu complémentaire réel tout en continuant leur parcours universitaire.
-      </p>
-
-      <div class="income-grid">
-        <div class="income-card">
-          <div class="small">Exemple 1</div>
-          <h3>Riz reconditionné</h3>
-          <span class="amount">Achètes bas et revends haut</span>
-          <p>
-            Achat en gros, reconditionnement en petits formats, revente dans le quartier,
-            sur le campus ou auprès de proches. Produit simple, utile et à forte rotation.
-          </p>
-        </div>
-
-        <div class="income-card">
-          <div class="small">Exemple 2</div>
-          <h3>Jus naturels</h3>
-          <span class="amount">Bonnes marges possibles</span>
-          <p>
-            Bissap, gingembre, canne à sucre : des produits visibles, demandés
-            et intéressants pour générer du cash rapidement, surtout dans les zones étudiantes.
-          </p>
-        </div>
-
-        <div class="income-card">
-          <div class="small">Exemple 3</div>
-          <h3>Produits du quotidien</h3>
-          <span class="amount">Petits gains, rotation rapide</span>
-          <p>
-            Eau, savon, snacks, accessoires téléphone, petits articles utiles :
-            des ventes simples qui permettent de se lancer sans complexité.
-          </p>
-        </div>
-      </div>
-
-      <div class="split" style="margin-top:34px;">
-        <div>
-          <div class="panel">
-            <h3>Comment cela fonctionne ?</h3>
-            <p>
-              Nous identifions des produits faciles à vendre. Nous les achetons en gros.
-              Ensuite, nous les proposons à des jeunes à un prix très proche du prix de gros,
-              afin qu’ils puissent eux-mêmes revendre avec une marge intéressante.
-            </p>
-          </div>
-
-          <div class="panel panel-note" style="margin-top:18px;">
-            <strong>Important</strong>
-            <p>
-              Les revenus dépendent du produit choisi, du volume vendu, de la motivation
-              et de la régularité de chacun. Nous ne promettons pas un revenu garanti :
-              nous proposons de vraies opportunités pour démarrer, accompagnées d’outils
-              de bien-être et de stabilité intérieure.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div class="cards-grid" style="grid-template-columns:1fr 1fr; margin-top:0;">
-            <div class="info-card">
-              <div class="icon">🌱</div>
-              <h3>Commencer petit</h3>
-              <p>
-                Même avec peu de moyens, il est possible de tester une première vente
-                et de construire progressivement quelque chose de sérieux.
-              </p>
-            </div>
-            <div class="info-card">
-              <div class="icon">🤝</div>
-              <h3>Vendre autour de soi</h3>
-              <p>
-                Amis, voisins, étudiants, quartier, campus : on commence par les réseaux proches
-                avant de grandir.
-              </p>
-            </div>
-            <div class="info-card">
-              <div class="icon">⚡</div>
-              <h3>Apprendre par l’action</h3>
-              <p>
-                On progresse en vendant, en parlant, en osant, en corrigeant et en recommençant.
-              </p>
-            </div>
-            <div class="info-card">
-              <div class="icon">👑</div>
-              <h3>Monter en responsabilité</h3>
-              <p>
-                Les plus réguliers peuvent ensuite aider d’autres jeunes, recruter,
-                organiser et devenir leaders.
-              </p>
-            </div>
-          </div>
-
-          <div class="photo-box">
-            <img src="skytogohero3.png" alt="Jeunes togolais en dynamique de groupe" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="videos" class="section section-light">
-    <div class="container">
-      <p class="eyebrow">Vidéos</p>
-      <h2 class="section-title-premium">Découvrir des exemples et initiatives YLTP / PIJE en vidéo</h2>
-      <p class="lead">
-        Clique directement sur une vignette pour ouvrir la vidéo ou la chaîne correspondante.
-      </p>
-
-      <div class="video-grid">
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/@iahvsouthafrica" target="_blank" rel="noopener noreferrer">
-            <img src="./thumb-south-africa.jpg" alt="Chaîne YouTube IAHV Afrique du Sud">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Chaîne YouTube</span>
-            <h3>Afrique du Sud</h3>
-            <p>Découvrir la chaîne IAHV South Africa et ses initiatives autour de la jeunesse, du leadership et du service.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/@iahvkenya" target="_blank" rel="noopener noreferrer">
-            <img src="./thumb-kenya.jpg" alt="Chaîne YouTube IAHV Kenya">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Chaîne YouTube</span>
-            <h3>Kenya</h3>
-            <p>Voir des exemples d’actions, d’organisation communautaire et de programmes portés au Kenya.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=sGzssorvfnA" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/sGzssorvfnA/hqdefault.jpg" alt="Vidéo YLTP Côte d’Ivoire">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Vidéo</span>
-            <h3>Côte d’Ivoire</h3>
-            <p>Voir une présentation vidéo liée au YLTP en Côte d’Ivoire.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=cO10diqfODk" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/cO10diqfODk/hqdefault.jpg" alt="Vidéo PIJE France 2016">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Vidéo</span>
-            <h3>France 2016</h3>
-            <p>Découvrir un exemple vidéo du programme en France.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=6qeHWK9tbyw&t=261s" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/6qeHWK9tbyw/hqdefault.jpg" alt="Vidéo PIJE France 2021">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Vidéo</span>
-            <h3>France 2021</h3>
-            <p>Voir une autre vidéo de présentation du programme en France.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="pitchs" class="section section-light">
-    <div class="container">
-      <p class="eyebrow">Sois centré et génères des revenus</p>
-      <h2 class="section-title-premium">Passes à l’action sans attendre</h2>
-      <p class="lead">
-        YLTP parle vrai. Pas de promesses vagues. Pas de long discours.
-        Une stratégie simple, un cadre sérieux, un accompagnement solide, des revenus concrets.
-      </p>
-
-      <div class="pitch-grid">
-        <div class="pitch-card">
-          <div class="quote">“</div>
-          <h3>Commence maintenant</h3>
-          <p>Tu peux commencer à gagner de l’argent dès cette semaine.</p>
-        </div>
-
-        <div class="pitch-card">
-          <div class="quote">“</div>
-          <h3>Teste sans attendre</h3>
-          <p>Même avec peu de moyens, tu peux lancer ton petit business.</p>
-        </div>
-
-        <div class="pitch-card">
-          <div class="quote">“</div>
-          <h3>Apprends en vendant</h3>
-          <p>C’est simple : tu achètes, tu revends, tu gardes ta marge.</p>
-        </div>
-
-        <div class="pitch-card">
-          <div class="quote">“</div>
-          <h3>Retrouve ton équilibre</h3>
-          <p>Tu peux aussi apprendre à mieux gérer ton stress et à retrouver plus de calme.</p>
-        </div>
-
-        <div class="pitch-card">
-          <div class="quote">“</div>
-          <h3>Avance avec sérieux</h3>
-          <p>Ce n’est pas du blabla : c’est une opportunité concrète pour les motivés.</p>
-        </div>
-
-        <div class="pitch-card">
-          <div class="quote">“</div>
-          <h3>Rejoins un réseau</h3>
-          <p>Tu n’es pas seul : tu progresses avec d’autres jeunes qui veulent réussir.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container">
-      <p class="eyebrow">Approche globale</p>
-      <h2 class="section-title-premium">Trois dimensions : revenu, leadership et équilibre intérieur</h2>
-      <p class="lead">
-        Le programme vise une montée en puissance progressive de la personne,
-        en travaillant à la fois l’autonomie mentale, financière et le leadership.
-      </p>
-
-      <div class="cards-grid">
-        <div class="info-card">
-          <div class="icon">💰</div>
-          <h3>Autonomie financière</h3>
-          <p>
-            Apprendre à générer un revenu, à vendre avec sérieux
-            et à créer des opportunités concrètes autour de soi.
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🧘🏾</div>
-          <h3>Bien-être et stabilité</h3>
-          <p>
-            Mieux gérer le stress, apaiser le mental et renforcer
-            l’équilibre intérieur dans un contexte souvent difficile.
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🌬️</div>
-          <h3>Respiration et méditation</h3>
-          <p>
-            Utiliser des techniques simples de respiration et de méditation
-            pour retrouver énergie, attention et calme.
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">👥</div>
           <h3>Leadership</h3>
-          <p>
-            Apprendre à prendre des responsabilités, à inspirer,
-            à recruter et à faire grandir d’autres jeunes.
-          </p>
+          <p>Deviens autonome et inspire les autres.</p>
         </div>
       </div>
     </div>
   </section>
 
-.partners-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-top:36px;
-}
+  <!-- PARTENAIRES -->
+  <section id="partenaires" class="section partners-section">
+    <div class="container">
+      <p class="eyebrow">Partenaires</p>
+      <h2 class="section-title-premium">Des partenaires internationaux solides</h2>
+      <p class="lead">
+        Le programme s’appuie sur des organisations reconnues à l’échelle mondiale.
+      </p>
 
-.partner-card{
-  background:linear-gradient(180deg, #fff 0%, #f8fbff 100%);
-  border:1px solid rgba(219,227,238,.85);
-  border-radius:30px;
-  box-shadow:var(--shadow);
-  padding:30px 26px;
-  transition:.22s ease;
-}
+      <div class="partners-grid">
+        <article class="partner-card">
+          <img src="./iahv-logo.png" class="partner-logo">
+          <h3>IAHV</h3>
+          <p>
+            ONG internationale fondée en 1997 à Genève, dédiée au développement des valeurs humaines,
+            à la réduction du stress et à la formation de leaders engagés.
+          </p>
+          <p>
+            Elle mène des actions humanitaires, de développement communautaire et de secours dans de nombreux pays.
+          </p>
+          <span class="partner-tag">ONG internationale</span>
+        </article>
 
-.partner-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 24px 44px rgba(15,23,42,.12);
-}
+        <article class="partner-card">
+          <img src="./Logo Art of Living.png" class="partner-logo">
+          <h3>Art of Living</h3>
+          <p>
+            Fondation internationale présente dans plus de 180 pays, spécialisée dans la respiration,
+            la méditation et le développement du potentiel humain.
+          </p>
+          <p>
+            Ses programmes ont aidé des millions de personnes à réduire le stress et améliorer leur bien-être.
+          </p>
+          <span class="partner-tag">Fondation internationale</span>
+        </article>
 
-.partner-logo{
-  height:64px;
-  width:auto;
-  object-fit:contain;
-  margin-bottom:18px;
-}
-
-.partner-card h3{
-  margin:0;
-  font-size:24px;
-  line-height:1.2;
-  color:var(--blue-deep);
-  letter-spacing:-.4px;
-}
-
-.partner-card p{
-  margin:14px 0 0;
-  color:#5b6472;
-  line-height:1.85;
-  font-size:16px;
-}
-
-.partner-card .partner-tag{
-  display:inline-block;
-  margin-top:14px;
-  font-size:12px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:var(--orange-dark);
-}
-
-@media (max-width: 1080px){
-  .partners-grid{
-    grid-template-columns:1fr;
-  }
-}
-<section id="partenaires" class="section partners-section">
-  <div class="container">
-    <p class="eyebrow">Partenaires</p>
-    <h2 class="section-title-premium">Des partenaires internationaux au service des jeunes, du leadership et des valeurs humaines</h2>
-    <p class="lead">
-      YLTP Togo s’inscrit dans une dynamique internationale qui associe autonomisation des jeunes,
-      leadership, bien-être mental, service et passage à l’action.
-    </p>
-
-    <div class="partners-grid">
-      <article class="partner-card">
-        <img src="./iahv-logo.png" alt="IAHV" class="partner-logo">
-        <h3>IAHV</h3>
-        <p>
-          L’Association Internationale pour les Valeurs Humaines est une ONG créée à Genève en 1997
-          par Sri Sri Ravi Shankar. Elle développe des programmes pour réduire le stress,
-          former des leaders et faire grandir les valeurs humaines dans la société.
-        </p>
-        <p>
-          IAHV soutient des initiatives humanitaires, de service, de développement communautaire
-          et de secours aux sinistrés, avec une vision fondée sur la responsabilité,
-          la non-violence et l’éthique du service.
-        </p>
-        <span class="partner-tag">ONG internationale</span>
-      </article>
-
-      <article class="partner-card">
-        <img src="./Logo Art of Living.png" alt="Art of Living" class="partner-logo">
-        <h3>Art of Living</h3>
-        <p>
-          The International Art of Living Foundation développe depuis plus de 42 ans des programmes
-          pour réduire le stress, renforcer la paix intérieure, la confiance, la concentration
-          et la disponibilité intérieure.
-        </p>
-        <p>
-          Présente internationalement, la fondation s’appuie notamment sur la respiration,
-          la méditation et le développement du potentiel humain. Elle est accréditée auprès
-          des Nations Unies comme organisation non gouvernementale internationale.
-        </p>
-        <span class="partner-tag">Fondation internationale</span>
-      </article>
-
-      <article class="partner-card">
-        <img src="./logo.png" alt="SKY Campus" class="partner-logo">
-        <h3>SKY Campus</h3>
-        <p>
-          SKY Campus est un programme partenaire dédié aux étudiants et jeunes adultes.
-          Il met l’accent sur le bien-être mental, la gestion du stress, la confiance,
-          la concentration et le développement du potentiel humain.
-        </p>
-        <p>
-          Dans le cadre de YLTP Togo, SKY Campus apporte une expertise utile pour travailler
-          avec les étudiants, en complément de l’approche terrain centrée sur les revenus,
-          le leadership et l’action.
-        </p>
-        <span class="partner-tag">Partenaire jeunesse</span>
-      </article>
+        <article class="partner-card">
+          <img src="./logo.png" class="partner-logo">
+          <h3>SKY Campus</h3>
+          <p>
+            Programme dédié aux étudiants pour développer leur bien-être mental, leur concentration
+            et leur confiance.
+          </p>
+          <p>
+            Il complète l’approche terrain du YLTP avec des outils concrets de gestion du stress.
+          </p>
+          <span class="partner-tag">Partenaire jeunesse</span>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- FAQ -->
   <section id="faq" class="section section-light">
     <div class="container" style="max-width:940px;">
       <p class="eyebrow" style="text-align:center;">FAQ</p>
@@ -1545,81 +1146,38 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary>À qui s’adresse le programme ?</summary>
-          <p>
-            Aux jeunes de 16 à 35 ans, notamment aux étudiants, qui veulent développer leur autonomie,
-            leur capacité à vendre, leur leadership, leur bien-être et leur esprit d’initiative.
-          </p>
+          <p>Aux jeunes de 16 à 35 ans, notamment aux étudiants.</p>
         </details>
 
         <details class="faq-item">
           <summary>Est-ce compatible avec les études ?</summary>
-          <p>
-            Oui. Le programme est pensé pour des jeunes qui étudient déjà. L’idée est de montrer
-            qu’en consacrant quelques heures par semaine à une activité simple, il est possible
-            de générer un revenu sans arrêter les études.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Qu’allons-nous vendre ?</summary>
-          <p>
-            Des produits simples, utiles et demandés : selon les disponibilités,
-            il peut s’agir de riz, de boissons, de produits du quotidien
-            ou d’autres articles faciles à revendre.
-          </p>
+          <p>Oui, quelques heures par semaine suffisent.</p>
         </details>
 
         <details class="faq-item">
           <summary>Le programme garantit-il un revenu ?</summary>
-          <p>
-            Non. Le programme ne garantit pas un revenu fixe.
-            Il propose des produits, un cadre, un accompagnement et une opportunité concrète.
-            Les résultats dépendent ensuite de l’engagement personnel.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Pourquoi intégrer bien-être, respiration et méditation ?</summary>
-          <p>
-            Parce que les jeunes ont aussi besoin de mieux gérer leur stress, leur fatigue mentale,
-            leurs émotions et leur concentration. Le programme relie donc revenus concrets
-            et outils intérieurs pour avancer plus solidement.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Quel est le rôle de SKY Campus ?</summary>
-          <p>
-            SKY Campus est ici un partenaire et une source d’inspiration.
-            Le programme est porté par YLTP Togo, avec l’appui de l’IAHV et de l’Art of Living.
-          </p>
+          <p>Non. Les résultats dépendent de l’engagement.</p>
         </details>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="section">
     <div class="container">
       <div class="cta-wrap">
         <div class="cta-grid">
           <div class="cta-content">
             <p class="eyebrow" style="color:#fed7aa;">Passe à l’action</p>
-            <h2>Rejoins un programme qui te fait avancer pour de vrai</h2>
-            <p>
-              Si tu veux vendre, générer un revenu, développer ta confiance,
-              mieux te structurer, mieux gérer ton stress et entrer dans une dynamique de leadership,
-              remplis le questionnaire maintenant.
-            </p>
+            <h2>Rejoins le programme</h2>
+            <p>Commence à générer des revenus et développe ton potentiel.</p>
           </div>
 
           <div class="cta-card">
             <strong>Questionnaire</strong>
-            <h3>Candidate dès maintenant</h3>
-            <p>
-              Remplis ce court formulaire pour nous permettre de mieux
-              comprendre ton profil et te recontacter rapidement.
-            </p>
-            <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
+            <h3>Candidate maintenant</h3>
+            <p>Remplis le formulaire pour être contacté.</p>
+            <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank">
               Remplir le questionnaire
             </a>
           </div>
@@ -1628,14 +1186,15 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="./Logo Art of Living.png" alt="Art of Living">
-        <img src="./iahv-logo.png" alt="IAHV" class="iahv-logo-footer">
+        <img src="./Logo Art of Living.png">
+        <img src="./iahv-logo.png" class="iahv-logo-footer">
         <div>
           <strong>YLTP Togo</strong>
-          <span>Programme porté par l’IAHV • Avec l’Art of Living comme partenaire</span>
+          <span>Programme porté par IAHV</span>
         </div>
       </div>
 
