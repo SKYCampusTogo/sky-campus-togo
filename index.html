@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="logo.png">
 
   <title>YLTP Togo – Programme jeunesse, revenus, leadership et bien-être</title>
 
@@ -365,7 +366,7 @@
     }
 
     .stats-grid{grid-template-columns:repeat(4,1fr)}
-    .cards-grid{grid-template-columns:repeat(4,1fr)}
+.cards-grid{grid-template-columns:repeat(3,1fr)}
     .pitch-grid{grid-template-columns:repeat(3,1fr)}
     .income-grid{grid-template-columns:repeat(3,1fr)}
     .video-grid{grid-template-columns:repeat(3,1fr)}
@@ -1233,10 +1234,11 @@
         box-shadow:0 18px 36px rgba(249,115,22,.35);
       }
 
-      body{
-        padding-bottom:84px;
-      }
-    }
+      @media (max-width:760px){
+  body{
+    padding-bottom:84px;
+  }
+}
 
     @media print{
       .topbar,
@@ -1274,9 +1276,8 @@
 <header class="topbar">
   <div class="container topbar-inner">
     <div class="brand">
-      <img src="./Logo Art of Living.png">
-      <img src="./iahv-logo.png" class="iahv-logo">
-      <div class="brand-text">
+     <img src="./Logo Art of Living.png" alt="Logo Art of Living">
+<img src="./iahv-logo.png" class="iahv-logo" alt="Logo IAHV">      <div class="brand-text">
         <strong>YLTP Togo</strong>
         <span>Youth Leadership Training Program</span>
         <span>Programme Innovant pour une Jeunesse Entreprenante</span>
@@ -1290,8 +1291,7 @@
       <a href="#partenaires">Partenaires</a>
     </nav>
 
-    <a class="btn btn-primary" href="https://forms.gle/...">
-      Rejoindre
+<a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">      Rejoindre
     </a>
   </div>
 </header>
@@ -1317,7 +1317,7 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://forms.gle/...">
+       <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
           Rejoindre le programme
         </a>
 
@@ -1331,9 +1331,11 @@
       </div>
     </div>
 
-    <div class="hero-visual">
-      <img src="skytogohero1.png">
-    </div>
+   <div class="hero-visual">
+  <div class="hero-main-photo">
+    <img src="skytogohero1.png" alt="Jeunes engagés dans le programme YLTP Togo">
+  </div>
+</div>
 
   </div>
 </section>
@@ -1532,7 +1534,7 @@
           </p>
 
           <!-- CTA PRINCIPAL -->
-          <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/...">
+          <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
             Rejoindre le programme
           </a>
 
@@ -1753,7 +1755,7 @@
 
     <div style="margin-top:30px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
 
-      <a class="btn btn-primary" href="https://wa.me/+33682578948" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-primary" href="https://wa.me/33682578948" target="_blank" rel="noopener noreferrer">
         WhatsApp
       </a>
 
