@@ -26,7 +26,6 @@
       --line:#dbe3ee;
       --shadow:0 22px 55px rgba(15,23,42,.10);
       --shadow-soft:0 12px 30px rgba(15,23,42,.07);
-      --radius:32px;
       --title-gradient:linear-gradient(90deg,#123f86 0%,#2f80ed 62%,#f97316 100%);
     }
 
@@ -88,9 +87,7 @@
       border:1px solid #edf2f7;
     }
 
-    .brand .iahv-logo{
-      height:58px;
-    }
+    .brand .iahv-logo{height:58px}
 
     .brand-text strong{
       display:block;
@@ -121,9 +118,7 @@
       font-weight:800;
     }
 
-    .nav a:hover{
-      color:var(--blue-dark);
-    }
+    .nav a:hover{color:var(--blue-dark)}
 
     .btn{
       display:inline-flex;
@@ -210,9 +205,7 @@
       max-width:850px;
     }
 
-    .hero h1 .accent{
-      color:var(--orange);
-    }
+    .hero h1 .accent{color:var(--orange)}
 
     .hero p{
       margin:24px 0 0;
@@ -270,7 +263,6 @@
       display:flex;
       flex-direction:column;
       justify-content:center;
-      position:relative;
     }
 
     .hero-info-card .mini{
@@ -374,7 +366,6 @@
     .pitch-grid{grid-template-columns:repeat(3,1fr)}
     .income-grid{grid-template-columns:repeat(3,1fr)}
     .video-grid{grid-template-columns:repeat(3,1fr)}
-    .partners-grid{grid-template-columns:repeat(3,1fr)}
     .impact-grid{grid-template-columns:repeat(3,1fr)}
 
     .stat-card,
@@ -571,9 +562,7 @@
       transition:transform .35s ease;
     }
 
-    .video-card:hover .video-thumb-link img{
-      transform:scale(1.04);
-    }
+    .video-card:hover .video-thumb-link img{transform:scale(1.04)}
 
     .video-play{
       position:absolute;
@@ -597,9 +586,7 @@
       box-shadow:0 10px 30px rgba(15,23,42,.18);
     }
 
-    .video-content{
-      padding:24px;
-    }
+    .video-content{padding:24px}
 
     .video-label,
     .partner-tag{
@@ -619,17 +606,53 @@
         linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
     }
 
-    .partner-logo{
-      height:70px;
-      width:auto;
-      object-fit:contain;
-      margin-bottom:20px;
+    .partners-grid{
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+      gap:30px;
+      flex-wrap:wrap;
     }
 
     .partner-card{
-      min-height:410px;
+      width:360px;
+      min-height:520px;
       display:flex;
       flex-direction:column;
+      align-items:center;
+      text-align:center;
+      transition:all 0.3s ease;
+    }
+
+    .partner-card a{
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      height:220px;
+      margin-bottom:10px;
+    }
+
+    .partner-card h3{margin-top:10px}
+
+    .partner-logo{
+      height:105px;
+      width:auto;
+      object-fit:contain;
+      margin:0 auto;
+      transition:all 0.3s ease;
+      transform:translateY(6px);
+    }
+
+    .partner-logo-large{height:190px}
+
+    .partner-card:hover{
+      transform:translateY(-8px) scale(1.02);
+      box-shadow:0 30px 60px rgba(0,0,0,0.12);
+    }
+
+    .partner-card:hover .partner-logo{
+      transform:translateY(6px) scale(1.08);
+      filter:brightness(1.05);
     }
 
     .partner-tag{
@@ -644,6 +667,152 @@
       line-height:1;
       margin-bottom:14px;
       letter-spacing:-1px;
+    }
+
+    .impact-global{
+      padding:125px 0;
+      text-align:center;
+      background:
+        radial-gradient(circle at top left, rgba(47,128,237,.12), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(249,115,22,.13), transparent 28%),
+        linear-gradient(180deg,#fff8f1 0%,#ffffff 100%);
+      overflow:hidden;
+    }
+
+    .impact-global h2{
+      margin-left:auto;
+      margin-right:auto;
+      max-width:1120px;
+      font-size:64px;
+      line-height:1.04;
+      letter-spacing:-1.8px;
+    }
+
+    .impact-global .impact-lead{
+      margin:26px auto 0;
+      max-width:960px;
+      color:var(--muted);
+      font-size:21px;
+      line-height:1.9;
+    }
+
+    .impact-proof-note{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-top:24px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(219,227,238,.9);
+      color:var(--blue-deep);
+      font-size:13px;
+      font-weight:900;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .impact-stats-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+      margin-top:52px;
+    }
+
+    .impact-stat{
+      background:#fff;
+      border:1px solid rgba(219,227,238,.9);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      padding:42px 28px;
+      min-height:215px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .impact-stat:before{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      top:-55px;
+      right:-55px;
+      background:rgba(47,128,237,.08);
+      border-radius:50%;
+    }
+
+    .impact-stat h3{
+      font-size:68px;
+      line-height:1;
+      color:var(--blue-deep);
+      margin:0 0 16px;
+      letter-spacing:-2px;
+    }
+
+    .impact-stat p{
+      color:var(--muted);
+      font-size:18px;
+      font-weight:900;
+      margin:0;
+      max-width:280px;
+      line-height:1.45;
+    }
+
+    .impact-highlight{
+      margin-top:34px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+      align-items:stretch;
+      text-align:left;
+    }
+
+    .impact-highlight-box{
+      background:linear-gradient(145deg,var(--blue) 0%,var(--blue-deep) 100%);
+      color:#fff;
+      border-radius:34px;
+      box-shadow:0 24px 50px rgba(47,128,237,.24);
+      padding:34px;
+    }
+
+    .impact-highlight-box h3{
+      margin:0;
+      font-size:34px;
+      line-height:1.15;
+    }
+
+    .impact-highlight-box p{
+      margin:16px 0 0;
+      color:#eff6ff;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .impact-mini-list{
+      background:#fff;
+      border:1px solid rgba(219,227,238,.9);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      padding:30px;
+    }
+
+    .impact-mini-list strong{
+      display:block;
+      color:var(--orange-dark);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:12px;
+      margin-bottom:16px;
+    }
+
+    .impact-mini-list p{
+      margin:0 0 12px;
+      color:#475569;
+      font-weight:800;
     }
 
     .faq-list{
@@ -761,9 +930,7 @@
       box-shadow:var(--shadow-soft);
     }
 
-    .footer-brand .iahv-logo-footer{
-      height:48px;
-    }
+    .footer-brand .iahv-logo-footer{height:48px}
 
     .footer-brand strong{
       display:block;
@@ -787,7 +954,8 @@
     @media (max-width:1080px){
       .hero-grid,
       .split,
-      .cta-grid{
+      .cta-grid,
+      .impact-highlight{
         grid-template-columns:1fr;
       }
 
@@ -796,18 +964,16 @@
       .pitch-grid,
       .income-grid,
       .video-grid,
-      .partners-grid,
-      .impact-grid{
+      .impact-grid,
+      .impact-stats-grid{
         grid-template-columns:repeat(2,1fr);
       }
 
       .hero h1{font-size:58px}
       .section h2{font-size:44px}
+      .impact-global h2{font-size:46px}
 
-      .hero-visual-layout{
-        grid-template-columns:1fr;
-      }
-
+      .hero-visual-layout{grid-template-columns:1fr}
       .hero-main-photo{min-height:380px}
       .hero-top-photo{height:240px}
     }
@@ -815,16 +981,12 @@
     @media (max-width:760px){
       .nav{display:none}
 
-      .topbar-inner{
-        align-items:flex-start;
-      }
+      .topbar-inner{align-items:flex-start}
 
       .brand img{height:64px}
       .brand .iahv-logo{height:52px}
 
-      .hero{
-        padding-top:38px;
-      }
+      .hero{padding-top:38px}
 
       .hero h1{
         font-size:42px;
@@ -841,7 +1003,8 @@
       }
 
       .section h2,
-      .cta-content h2{
+      .cta-content h2,
+      .impact-global h2{
         font-size:34px;
       }
 
@@ -850,110 +1013,16 @@
       .pitch-grid,
       .income-grid,
       .video-grid,
-      .partners-grid,
-      .impact-grid{
+      .impact-grid,
+      .impact-stats-grid{
         grid-template-columns:1fr;
       }
 
-      .cta-grid{
-        padding:24px;
-      }
-      }
-
-.partners-grid{
-  display:flex;
-  justify-content:center;
-  align-items:stretch;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-.partner-card{
-  width:360px;
-  min-height:520px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  transition:all 0.3s ease;
-}
-
-.partner-card a{
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-  height:220px;
-  margin-bottom:10px;
-}
-
-.partner-card h3{
-  margin-top:10px;
-}
-
-.partner-logo{
-  height:105px;
-  width:auto;
-  object-fit:contain;
-  margin:0 auto;
-  transition:all 0.3s ease;
-  transform:translateY(6px);
-}
-
-.partner-logo-large{
-  height:190px;
-}
-
-.partner-card:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 30px 60px rgba(0,0,0,0.12);
-}
-
-.partner-card:hover .partner-logo{
-  transform:translateY(6px) scale(1.08);
-  filter:brightness(1.05);
-}
-
-.impact-global{
-  padding:90px 0;
-  text-align:center;
-  background:#fff8f1;
-}
-
-.impact-stats-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  margin-top:40px;
-}
-
-.impact-stat{
-  background:#fff;
-  border:1px solid rgba(219,227,238,.85);
-  border-radius:30px;
-  box-shadow:var(--shadow);
-  padding:34px 24px;
-}
-
-.impact-stat h3{
-  font-size:48px;
-  color:var(--blue-deep);
-  margin:0 0 10px;
-}
-
-.impact-stat p{
-  color:var(--muted);
-  font-size:16px;
-  font-weight:800;
-  margin:0;
-}
-
-@media (max-width:760px){
-  .impact-stats-grid{
-    grid-template-columns:1fr;
-  }
-}
-    </style>
-  
+      .impact-stat h3{font-size:54px}
+      .cta-grid{padding:24px}
+      .partner-card{width:100%}
+    }
+  </style>
 </head>
 
 <body>
@@ -974,13 +1043,13 @@
         <a href="#programme">Programme</a>
         <a href="#revenus">Revenus</a>
         <a href="#videos">Vidéos</a>
-<a href="#impact-international">Impact</a>
+        <a href="#impact-international">Impact</a>
         <a href="#partenaires">Partenaires</a>
         <a href="#faq">FAQ</a>
       </nav>
 
       <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
-        👉 Rejoins le programme en cliquant ici !
+        👉 Rejoins le programme
       </a>
     </div>
   </header>
@@ -1007,7 +1076,7 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
-            👉 Rejoins le programme en cliquant ici !
+            👉 Rejoins le programme
           </a>
           <a class="btn btn-secondary" href="#revenus">Voir les opportunités</a>
         </div>
@@ -1051,8 +1120,8 @@
         du leadership, du bien-être, de l’engagement et du passage à l’action.
       </p>
 
-<div class="impact-stats-grid">     
-  <div class="stat-card">
+      <div class="stats-grid">
+        <div class="stat-card">
           <strong>1997</strong>
           <span>année de lancement du YLTP</span>
         </div>
@@ -1063,8 +1132,8 @@
         </div>
 
         <div class="stat-card">
-          <strong>16/35 ans</strong>
-          <span>cœur de cible du programme</span>
+          <strong>16–35</strong>
+          <span>ans, cœur de cible du programme</span>
         </div>
 
         <div class="stat-card">
@@ -1232,8 +1301,7 @@
       </div>
     </div>
   </section>
-
-  <section id="videos" class="section section-light">
+    <section id="videos" class="section section-light">
     <div class="container">
       <p class="eyebrow">Vidéos</p>
       <h2 class="section-title-premium">Découvrir des exemples et initiatives YLTP / PIJE en vidéo</h2>
@@ -1305,9 +1373,10 @@
       </div>
     </div>
   </section>
-  <section id="impact" class="section section-soft">
+
+  <section id="impact-local" class="section section-soft">
     <div class="container">
-      <p class="eyebrow">Impact</p>
+      <p class="eyebrow">Impact terrain</p>
       <h2 class="section-title-premium">Une approche pensée pour créer un impact concret</h2>
 
       <p class="lead">
@@ -1370,10 +1439,6 @@
         <div class="pitch-card">
           <h3>Apprends en vendant</h3>
           <p>Tu achètes, tu revends, tu observes, tu ajustes et tu gardes ta marge.</p>
-      
-        
-        
-        
         </div>
 
         <div class="pitch-card">
@@ -1407,8 +1472,10 @@
 
       <div class="partners-grid">
         <article class="partner-card">
-<a href="https://www.iahv.org/" target="_blank" rel="noopener noreferrer">
-<img src="./iahv-logo.png" class="partner-logo partner-logo-large"></a>
+          <a href="https://www.iahv.org/" target="_blank" rel="noopener noreferrer">
+            <img src="./iahv-logo.png" alt="Logo IAHV" class="partner-logo partner-logo-large">
+          </a>
+
           <h3>IAHV</h3>
 
           <p>
@@ -1426,13 +1493,14 @@
         </article>
 
         <article class="partner-card">
-<a href="https://www.artofliving.org/" target="_blank" rel="noopener noreferrer">
-  <img src="./Logo Art of Living.png" alt="Logo Art of Living" class="partner-logo">
-</a>
+          <a href="https://www.artofliving.org/" target="_blank" rel="noopener noreferrer">
+            <img src="./Logo Art of Living.png" alt="Logo Art of Living" class="partner-logo">
+          </a>
+
           <h3>Art of Living</h3>
 
           <p>
-            La Fondation Internationale de l'Art de Vivre (The International Art of Living Foundation) développe depuis plus de 45 ans des programmes
+            La Fondation Internationale de l'Art de Vivre développe depuis plus de 45 ans des programmes
             de respiration, de méditation et de développement du potentiel humain pour réduire le stress,
             favoriser la paix intérieure, renforcer la confiance et améliorer la concentration.
           </p>
@@ -1446,8 +1514,10 @@
         </article>
 
         <article class="partner-card">
-<a href="https://www.skycampus.fr/" target="_blank" rel="noopener noreferrer">
-<img src="./logo.png" class="partner-logo partner-logo-large"></a>
+          <a href="https://www.skycampus.fr/" target="_blank" rel="noopener noreferrer">
+            <img src="./logo.png" alt="Logo SKY Campus" class="partner-logo partner-logo-large">
+          </a>
+
           <h3>SKY Campus</h3>
 
           <p>
@@ -1464,153 +1534,6 @@
           <span class="partner-tag">Partenaire jeunesse</span>
         </article>
       </div>
-        </div>
-  </section>
-<section id="impact-international" class="impact-global">
-  <div class="container">
-    <p class="eyebrow">Impact international</p>
-    <h2 class="section-title-premium">
-      Un programme inscrit dans un mouvement mondial
-    </h2>
-
-<div class="impact-stats-grid">
-  <div class="impact-stat">
-        <h3>182</h3>
-        <p>pays</p>
-      </div>
-
-      <div class="impact-stat">
-        <h3>800M+</h3>
-        <p>personnes touchées</p>
-      </div>
-
-      <div class="impact-stat">
-        <h3>1M+</h3>
-        <p>étudiants formés</p>
-      </div>
-
-      <div class="impact-stat">
-        <h3>50M+</h3>
-        <p>participants</p>
-      </div>
-
-      <div class="impact-stat">
-        <h3>1M</h3>
-        <p>bénévoles</p>
-      </div>
-
-      <div class="impact-stat">
-        <h3>40K+</h3>
-        <p>formateurs</p>
-      </div>
     </div>
-  </div>
-</section>
-  
-  <section id="faq" class="section section-light">
-    <div class="container" style="max-width:940px;">
-      <p class="eyebrow" style="text-align:center;">FAQ</p>
-      <h2 class="section-title-premium" style="text-align:center;">Questions fréquentes</h2>
-
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>À qui s’adresse le programme ?</summary>
-          <p>
-            Aux jeunes de 16 à 35 ans, notamment aux étudiants, qui veulent développer leur autonomie,
-            leur capacité à vendre, leur leadership, leur bien-être et leur esprit d’initiative.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Est-ce compatible avec les études ?</summary>
-          <p>
-            Oui. Le programme est pensé pour des jeunes qui étudient déjà. L’idée est de montrer
-            qu’en consacrant quelques heures par semaine à une activité simple, il est possible
-            de générer un revenu complémentaire sans arrêter les études.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Qu’allons-nous vendre ?</summary>
-          <p>
-            Des produits simples, utiles et demandés : selon les disponibilités, il peut s’agir de riz,
-            de boissons naturelles, de produits du quotidien ou d’autres articles faciles à revendre.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Le programme garantit-il un revenu ?</summary>
-          <p>
-            Non. Le programme ne garantit pas un revenu fixe. Il propose des produits, un cadre,
-            un accompagnement et une opportunité concrète. Les résultats dépendent ensuite de l’engagement personnel.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Pourquoi intégrer bien-être, respiration et méditation ?</summary>
-          <p>
-            Parce que les jeunes ont aussi besoin de mieux gérer leur stress, leur fatigue mentale,
-            leurs émotions et leur concentration. Le programme relie donc revenus concrets
-            et outils intérieurs pour avancer plus solidement.
-          </p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Quel est le rôle des partenaires ?</summary>
-          <p>
-            Les partenaires apportent une expérience internationale, des outils de bien-être,
-            une approche fondée sur les valeurs humaines et un cadre d’accompagnement pour renforcer l’impact du programme.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="cta-wrap">
-        <div class="cta-grid">
-          <div class="cta-content">
-            <p class="eyebrow" style="color:#fed7aa;">Passe à l’action</p>
-            <h2>Rejoins un programme qui te fait avancer concrètement</h2>
-            <p>
-              Si tu veux vendre, générer un revenu, développer ta confiance, mieux te structurer,
-              mieux gérer ton stress et entrer dans une dynamique de leadership, remplis le questionnaire maintenant pour rejoindre le programme.
-            </p>
-          </div>
-
-          <div class="cta-card">
-            <strong>Questionnaire</strong>
-            <h3>Candidate dès maintenant</h3>
-            <p>
-              Remplis ce court formulaire pour nous permettre de mieux comprendre ton profil
-              et te recontacter rapidement.
-            </p>
-
-            <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
-              👉 Rejoins le programme en cliquant ici !
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="./Logo Art of Living.png" alt="Art of Living">
-        <img src="./iahv-logo.png" alt="IAHV" class="iahv-logo-footer">
-
-        <div>
-          <strong>YLTP Togo</strong>
-          <span>Programme porté par IAHV • Avec l’Art of Living comme partenaire international</span>
-        </div>
-      </div>
-
-      <div class="footer-copy">© 2026 YLTP Togo</div>
-    </div>
-  </footer>
-
-</body>
-</html>
+  </section
+    
