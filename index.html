@@ -860,9 +860,7 @@
       }
       }
 
-/* === AJOUT ICI === */
-
-    .partners-grid{
+.partners-grid{
   display:flex;
   justify-content:center;
   align-items:stretch;
@@ -887,9 +885,11 @@
   height:220px;
   margin-bottom:10px;
 }
-    .partner-card h3{
+
+.partner-card h3{
   margin-top:10px;
 }
+
 .partner-logo{
   height:105px;
   width:auto;
@@ -909,31 +909,50 @@
 }
 
 .partner-card:hover .partner-logo{
-  transform:scale(1.08);
+  transform:translateY(6px) scale(1.08);
   filter:brightness(1.05);
-  .impact-global{
-  padding:80px 0;
-  text-align:center;
 }
 
-.stats-grid{
+.impact-global{
+  padding:90px 0;
+  text-align:center;
+  background:#fff8f1;
+}
+
+.impact-stats-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:30px;
   margin-top:40px;
 }
 
-.stat h3{
-  font-size:42px;
-  color:var(--blue-deep);
-  margin-bottom:10px;
+.impact-stat{
+  background:#fff;
+  border:1px solid rgba(219,227,238,.85);
+  border-radius:30px;
+  box-shadow:var(--shadow);
+  padding:34px 24px;
 }
 
-.stat p{
+.impact-stat h3{
+  font-size:48px;
+  color:var(--blue-deep);
+  margin:0 0 10px;
+}
+
+.impact-stat p{
   color:var(--muted);
   font-size:16px;
+  font-weight:800;
+  margin:0;
 }
-  </style>
+
+@media (max-width:760px){
+  .impact-stats-grid{
+    grid-template-columns:1fr;
+  }
+}
+    </style>
   
 </head>
 
@@ -1445,7 +1464,8 @@
           <span class="partner-tag">Partenaire jeunesse</span>
         </article>
       </div>
-      
+        </div>
+  </section>
 <section class="impact-global">
   <div class="container">
     <p class="eyebrow">Impact international</p>
