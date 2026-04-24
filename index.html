@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>YLTP Togo – PIJE</title>
+  <title>YLTP Togo – Programme jeunesse, revenus, leadership et bien-être</title>
 
   <meta
     name="description"
-    content="YLTP Togo aide les jeunes et les étudiants à générer des revenus, développer leur leadership, mieux gérer leur stress et renforcer leur bien-être mental."
+    content="YLTP Togo est un programme d’accompagnement pour aider les jeunes à générer des revenus, développer leur leadership, renforcer leur bien-être mental et agir dans leur communauté."
   />
 
   <style>
@@ -30,7 +30,6 @@
     }
 
     *{box-sizing:border-box}
-
     html{scroll-behavior:smooth}
 
     body{
@@ -108,13 +107,13 @@
     .nav{
       display:flex;
       align-items:center;
-      gap:22px;
+      gap:20px;
       flex-wrap:wrap;
     }
 
     .nav a{
       color:#334155;
-      font-size:15px;
+      font-size:14px;
       font-weight:800;
     }
 
@@ -157,9 +156,16 @@
       transform:translateY(-2px);
     }
 
+    .micro-copy{
+      margin-top:12px;
+      color:#64748b;
+      font-size:13px;
+      font-weight:800;
+    }
+
     .hero{
       overflow:hidden;
-      padding:72px 0 70px;
+      padding:76px 0 74px;
       background:
         radial-gradient(circle at top left, rgba(47,128,237,.13), transparent 30%),
         radial-gradient(circle at top right, rgba(249,115,22,.12), transparent 24%),
@@ -202,7 +208,7 @@
       line-height:.96;
       letter-spacing:-2.1px;
       color:var(--blue-deep);
-      max-width:850px;
+      max-width:900px;
     }
 
     .hero h1 .accent{color:var(--orange)}
@@ -211,7 +217,7 @@
       margin:24px 0 0;
       font-size:20px;
       color:var(--muted);
-      max-width:760px;
+      max-width:780px;
       line-height:1.85;
     }
 
@@ -316,10 +322,10 @@
 
     .section h2{
       margin:0;
-      font-size:58px;
+      font-size:56px;
       line-height:1.04;
       letter-spacing:-1.5px;
-      max-width:1040px;
+      max-width:1060px;
       color:var(--blue-deep);
     }
 
@@ -343,7 +349,7 @@
       color:#6b7280;
       font-size:15px;
       margin-bottom:20px;
-      max-width:900px;
+      max-width:920px;
       margin-left:auto;
       margin-right:auto;
       line-height:1.8;
@@ -354,8 +360,13 @@
     .pitch-grid,
     .income-grid,
     .video-grid,
-    .partners-grid,
-    .impact-grid{
+    .impact-grid,
+    .steps-grid,
+    .benefits-grid,
+    .learn-grid,
+    .audience-grid,
+    .objection-grid,
+    .pilot-grid{
       display:grid;
       gap:22px;
       margin-top:38px;
@@ -367,6 +378,12 @@
     .income-grid{grid-template-columns:repeat(3,1fr)}
     .video-grid{grid-template-columns:repeat(3,1fr)}
     .impact-grid{grid-template-columns:repeat(3,1fr)}
+    .steps-grid{grid-template-columns:repeat(5,1fr)}
+    .benefits-grid{grid-template-columns:repeat(3,1fr)}
+    .learn-grid{grid-template-columns:repeat(4,1fr)}
+    .audience-grid{grid-template-columns:repeat(4,1fr)}
+    .objection-grid{grid-template-columns:repeat(3,1fr)}
+    .pilot-grid{grid-template-columns:repeat(3,1fr)}
 
     .stat-card,
     .info-card,
@@ -376,7 +393,13 @@
     .partner-card,
     .impact-card,
     .panel,
-    .faq-item{
+    .faq-item,
+    .step-card,
+    .benefit-card,
+    .learn-card,
+    .audience-card,
+    .objection-card,
+    .pilot-card{
       background:#fff;
       border:1px solid rgba(219,227,238,.85);
       border-radius:30px;
@@ -412,7 +435,13 @@
     .pitch-card,
     .income-card,
     .partner-card,
-    .impact-card{
+    .impact-card,
+    .step-card,
+    .benefit-card,
+    .learn-card,
+    .audience-card,
+    .objection-card,
+    .pilot-card{
       padding:30px 26px;
       transition:.22s ease;
       background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
@@ -423,7 +452,13 @@
     .income-card:hover,
     .partner-card:hover,
     .impact-card:hover,
-    .video-card:hover{
+    .video-card:hover,
+    .step-card:hover,
+    .benefit-card:hover,
+    .learn-card:hover,
+    .audience-card:hover,
+    .objection-card:hover,
+    .pilot-card:hover{
       transform:translateY(-5px);
       box-shadow:0 26px 48px rgba(15,23,42,.13);
     }
@@ -447,7 +482,13 @@
     .income-card h3,
     .partner-card h3,
     .impact-card h3,
-    .video-card h3{
+    .video-card h3,
+    .step-card h3,
+    .benefit-card h3,
+    .learn-card h3,
+    .audience-card h3,
+    .objection-card h3,
+    .pilot-card h3{
       margin:0;
       font-size:24px;
       line-height:1.2;
@@ -460,7 +501,13 @@
     .income-card p,
     .partner-card p,
     .impact-card p,
-    .video-card p{
+    .video-card p,
+    .step-card p,
+    .benefit-card p,
+    .learn-card p,
+    .audience-card p,
+    .objection-card p,
+    .pilot-card p{
       margin:14px 0 0;
       color:#5b6472;
       line-height:1.85;
@@ -538,8 +585,7 @@
       text-transform:uppercase;
       letter-spacing:.18em;
     }
-
-    .video-card{
+        .video-card{
       overflow:hidden;
       transition:.22s ease;
       display:flex;
@@ -612,6 +658,7 @@
       align-items:stretch;
       gap:30px;
       flex-wrap:wrap;
+      margin-top:38px;
     }
 
     .partner-card{
@@ -660,13 +707,156 @@
       padding-top:18px;
     }
 
-    .impact-card strong{
+    .impact-card strong,
+    .step-card strong{
       display:block;
       font-size:42px;
       color:var(--blue-deep);
       line-height:1;
       margin-bottom:14px;
       letter-spacing:-1px;
+    }
+
+    .credibility-strip{
+      padding:26px 0;
+      background:#fff;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .credibility-items{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      text-align:center;
+    }
+
+    .credibility-items span{
+      background:#f8fbff;
+      border:1px solid rgba(219,227,238,.9);
+      color:var(--blue-deep);
+      border-radius:999px;
+      padding:12px 18px;
+      font-size:14px;
+      font-weight:900;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .problem-solution{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      margin-top:38px;
+    }
+
+    .problem-box,
+    .solution-box{
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(219,227,238,.85);
+    }
+
+    .problem-box{
+      background:#fff;
+    }
+
+    .solution-box{
+      background:linear-gradient(145deg,var(--blue) 0%,var(--blue-deep) 100%);
+      color:#fff;
+    }
+
+    .problem-box h3,
+    .solution-box h3{
+      margin:0;
+      font-size:32px;
+      line-height:1.15;
+      letter-spacing:-.6px;
+    }
+
+    .problem-box h3{color:var(--blue-deep)}
+    .solution-box h3{color:#fff}
+
+    .problem-box p,
+    .solution-box p{
+      margin:16px 0 0;
+      font-size:17px;
+      line-height:1.85;
+    }
+
+    .problem-box p{color:#5b6472}
+    .solution-box p{color:#eff6ff}
+
+    .truth-list{
+      margin-top:22px;
+      display:grid;
+      gap:12px;
+    }
+
+    .truth-list div{
+      background:#fff;
+      border:1px solid rgba(219,227,238,.9);
+      border-radius:18px;
+      padding:16px;
+      color:#475569;
+      font-weight:800;
+    }
+
+    .transformation-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      margin-top:38px;
+    }
+
+    .before-box,
+    .after-box{
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(219,227,238,.85);
+      background:#fff;
+    }
+
+    .before-box h3,
+    .after-box h3{
+      margin:0 0 18px;
+      font-size:32px;
+      color:var(--blue-deep);
+    }
+
+    .before-box ul,
+    .after-box ul{
+      margin:0;
+      padding-left:20px;
+      color:#5b6472;
+      font-size:17px;
+      line-height:2;
+      font-weight:800;
+    }
+
+    .governance-box{
+      margin-top:38px;
+      background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
+      border:1px solid rgba(219,227,238,.9);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      padding:36px;
+    }
+
+    .governance-box h3{
+      margin:0;
+      color:var(--blue-deep);
+      font-size:34px;
+      line-height:1.15;
+    }
+
+    .governance-box p{
+      margin:16px 0 0;
+      color:#5b6472;
+      font-size:17px;
+      line-height:1.9;
     }
 
     .impact-global{
@@ -690,7 +880,7 @@
 
     .impact-global .impact-lead{
       margin:26px auto 0;
-      max-width:960px;
+      max-width:980px;
       color:var(--muted);
       font-size:21px;
       line-height:1.9;
@@ -951,11 +1141,17 @@
       font-weight:700;
     }
 
+    .floating-mobile-cta{
+      display:none;
+    }
+
     @media (max-width:1080px){
       .hero-grid,
       .split,
       .cta-grid,
-      .impact-highlight{
+      .impact-highlight,
+      .problem-solution,
+      .transformation-grid{
         grid-template-columns:1fr;
       }
 
@@ -965,7 +1161,13 @@
       .income-grid,
       .video-grid,
       .impact-grid,
-      .impact-stats-grid{
+      .impact-stats-grid,
+      .steps-grid,
+      .benefits-grid,
+      .learn-grid,
+      .audience-grid,
+      .objection-grid,
+      .pilot-grid{
         grid-template-columns:repeat(2,1fr);
       }
 
@@ -980,12 +1182,9 @@
 
     @media (max-width:760px){
       .nav{display:none}
-
       .topbar-inner{align-items:flex-start}
-
       .brand img{height:64px}
       .brand .iahv-logo{height:52px}
-
       .hero{padding-top:38px}
 
       .hero h1{
@@ -1014,13 +1213,37 @@
       .income-grid,
       .video-grid,
       .impact-grid,
-      .impact-stats-grid{
+      .impact-stats-grid,
+      .steps-grid,
+      .benefits-grid,
+      .learn-grid,
+      .audience-grid,
+      .objection-grid,
+      .pilot-grid{
         grid-template-columns:1fr;
       }
 
       .impact-stat h3{font-size:54px}
       .cta-grid{padding:24px}
       .partner-card{width:100%}
+
+      .floating-mobile-cta{
+        display:block;
+        position:fixed;
+        left:16px;
+        right:16px;
+        bottom:14px;
+        z-index:999;
+      }
+
+      .floating-mobile-cta .btn{
+        width:100%;
+        box-shadow:0 18px 36px rgba(249,115,22,.35);
+      }
+
+      body{
+        padding-bottom:84px;
+      }
     }
   </style>
 </head>
@@ -1030,8 +1253,8 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <img src="./Logo Art of Living.png" alt="Art of Living">
-        <img src="./iahv-logo.png" alt="IAHV" class="iahv-logo">
+        <img src="./Logo Art of Living.png" alt="Logo Art of Living">
+        <img src="./iahv-logo.png" alt="Logo IAHV" class="iahv-logo">
         <div class="brand-text">
           <strong>YLTP Togo</strong>
           <span>Youth Leadership Training Program</span>
@@ -1042,14 +1265,15 @@
       <nav class="nav">
         <a href="#programme">Programme</a>
         <a href="#revenus">Revenus</a>
-        <a href="#videos">Vidéos</a>
+        <a href="#parcours">Parcours</a>
         <a href="#impact-international">Impact</a>
         <a href="#partenaires">Partenaires</a>
+        <a href="#videos">Vidéos</a>
         <a href="#faq">FAQ</a>
       </nav>
 
       <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
-        👉 Rejoins le programme
+        Rejoindre
       </a>
     </div>
   </header>
@@ -1058,34 +1282,36 @@
     <div class="container hero-grid">
       <div>
         <div class="badges">
-          <span class="badge">Programme pour les 16–35 ans</span>
-          <span class="badge">Revenus • leadership • bien-être</span>
+          <span class="badge">Programme d’accompagnement jeunesse</span>
+          <span class="badge">Revenus • leadership • bien-être mental</span>
         </div>
 
         <h1>
-          Génère des revenus.<br>
-          Développe ton leadership.<br>
-          <span class="accent">Renforce ton équilibre intérieur.</span>
+          Un programme pour aider les jeunes à générer des revenus, développer leur leadership et renforcer leur équilibre intérieur.
         </h1>
 
         <p>
-          YLTP Togo accompagne les jeunes et les étudiants pour créer des opportunités concrètes de revenus,
-          développer leur confiance, renforcer leur leadership et apprendre à mieux gérer le stress grâce à des outils
-          simples de respiration, de méditation et de passage à l’action.
+          YLTP Togo accompagne les jeunes et les étudiants à travers un parcours concret :
+          activité génératrice de revenus, confiance, leadership, respiration, gestion du stress
+          et engagement au service de la communauté.
         </p>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank" rel="noopener noreferrer">
-            👉 Rejoins le programme
+            Rejoindre le programme
           </a>
-          <a class="btn btn-secondary" href="#revenus">Voir les opportunités</a>
+          <a class="btn btn-secondary" href="#impact-international">Découvrir l’impact</a>
+        </div>
+
+        <div class="micro-copy">
+          Réponse rapide • Sans engagement • Places limitées selon disponibilité
         </div>
 
         <div class="hero-tags">
-          <span class="badge">Autonomie financière</span>
+          <span class="badge">Autonomie économique</span>
           <span class="badge">Santé mentale</span>
-          <span class="badge">Respiration</span>
-          <span class="badge">Leadership</span>
+          <span class="badge">Action terrain</span>
+          <span class="badge">Leadership local</span>
         </div>
       </div>
 
@@ -1102,10 +1328,10 @@
 
             <div class="hero-info-card">
               <div class="mini">YLTP / PIJE</div>
-              <h3>Un programme qui allie revenus, leadership et stabilité intérieure.</h3>
+              <h3>Une approche structurée, progressive et orientée terrain.</h3>
               <p>
-                Une approche complète pour aider les jeunes à agir concrètement, entreprendre avec sérieux
-                et avancer avec plus de calme, de clarté et de confiance.
+                Un parcours pour apprendre à agir, vendre, s’organiser, gérer son stress
+                et devenir un relais positif dans son environnement.
               </p>
             </div>
           </div>
@@ -1113,548 +1339,422 @@
       </div>
     </div>
   </section>
-    <section class="section section-light">
+    <!-- BANDEAU CRÉDIBILITÉ -->
+  <section class="credibility-strip">
     <div class="container">
-      <p class="section-note">
-        YLTP existe depuis 1997. Cela représente près de 30 ans d’expérience au service de la jeunesse,
-        du leadership, du bien-être, de l’engagement et du passage à l’action.
-      </p>
+      <div class="credibility-items">
+        <span>Programme jeunesse international</span>
+        <span>Présent dans de nombreux pays</span>
+        <span>Approche terrain concrète</span>
+        <span>Bien-être mental & leadership</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <strong>1997</strong>
-          <span>année de lancement du YLTP</span>
+  <!-- PROBLÈME / SOLUTION -->
+  <section class="section section-light">
+    <div class="container">
+      <p class="eyebrow">Contexte</p>
+      <h2 class="section-title-premium">Une réalité que vivent de nombreux jeunes</h2>
+
+      <div class="problem-solution">
+
+        <div class="problem-box">
+          <h3>Le problème</h3>
+          <p>
+            Beaucoup de jeunes font face à un manque d’opportunités, à la difficulté de générer un revenu,
+            au stress, au manque de confiance et à l’absence d’accompagnement concret.
+          </p>
         </div>
 
-        <div class="stat-card">
-          <strong>29 ans</strong>
-          <span>d’expérience internationale</span>
+        <div class="solution-box">
+          <h3>La solution YLTP Togo</h3>
+          <p>
+            Un programme simple et structuré qui combine activité génératrice de revenus,
+            développement personnel, gestion du stress et apprentissage du leadership.
+          </p>
         </div>
 
-        <div class="stat-card">
-          <strong>16–35</strong>
-          <span>ans, cœur de cible du programme</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILIERS -->
+  <section class="section section-soft">
+    <div class="container">
+      <p class="eyebrow">Fondations</p>
+      <h2 class="section-title-premium">Les 3 piliers du programme</h2>
+
+      <div class="cards-grid">
+        <div class="info-card">
+          <div class="icon">💰</div>
+          <h3>Revenus</h3>
+          <p>Apprendre à vendre, générer une marge et créer une activité simple.</p>
         </div>
 
-        <div class="stat-card">
-          <strong>3 axes</strong>
-          <span>revenus, leadership, équilibre intérieur</span>
+        <div class="info-card">
+          <div class="icon">🧘</div>
+          <h3>Équilibre intérieur</h3>
+          <p>Respiration, gestion du stress et stabilité mentale.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">👥</div>
+          <h3>Leadership</h3>
+          <p>Prendre des responsabilités et accompagner d’autres jeunes.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- TRANSFORMATION -->
+  <section class="section section-light">
+    <div class="container">
+      <p class="eyebrow">Transformation</p>
+      <h2 class="section-title-premium">Avant / Après le programme</h2>
+
+      <div class="transformation-grid">
+
+        <div class="before-box">
+          <h3>Avant</h3>
+          <ul>
+            <li>Stress et pression</li>
+            <li>Peu ou pas de revenus</li>
+            <li>Manque de confiance</li>
+            <li>Peu d’accompagnement</li>
+          </ul>
+        </div>
+
+        <div class="after-box">
+          <h3>Après</h3>
+          <ul>
+            <li>Premières ventes réalisées</li>
+            <li>Plus de calme et de clarté</li>
+            <li>Confiance renforcée</li>
+            <li>Leadership et réseau</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUE CE PROGRAMME N’EST PAS -->
+  <section class="section section-soft">
+    <div class="container">
+      <p class="eyebrow">Clarté</p>
+      <h2 class="section-title-premium">Ce que ce programme n’est pas</h2>
+
+      <div class="truth-list">
+        <div>❌ Ce n’est pas une promesse d’argent facile</div>
+        <div>❌ Ce n’est pas un emploi garanti</div>
+        <div>❌ Ce n’est pas un programme passif</div>
+        <div>✅ C’est un cadre concret pour ceux qui veulent agir</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
   <section id="programme" class="section section-light">
     <div class="container">
       <p class="eyebrow">Le programme</p>
-      <h2 class="section-title-premium">Un parcours pour soutenir les jeunes à générer un revenu et se transformer</h2>
+      <h2 class="section-title-premium">Un parcours structuré pour passer à l’action</h2>
 
       <p class="lead">
-        YLTP s’adresse aux jeunes qui veulent développer leur autonomie financière,
-        prendre des responsabilités, mieux gérer leur stress et construire un avenir plus solide.
-        Le programme associe développement personnel, santé mentale, respiration, méditation,
-        leadership et opportunités concrètes de revenus.
+        Le programme combine apprentissage pratique, développement personnel et mise en action immédiate.
       </p>
 
       <div class="cards-grid">
         <div class="info-card">
           <div class="icon">💼</div>
           <h3>Revenus concrets</h3>
-          <p>
-            Apprendre à vendre des produits simples et utiles, à créer une marge
-            et à démarrer une activité génératrice de revenus.
-          </p>
+          <p>Apprendre à vendre et générer une marge.</p>
         </div>
 
         <div class="info-card">
           <div class="icon">🧠</div>
           <h3>Santé mentale</h3>
-          <p>
-            Développer des outils concrets pour mieux gérer la pression,
-            retrouver de la clarté mentale et avancer avec stabilité.
-          </p>
+          <p>Développer stabilité et clarté mentale.</p>
         </div>
 
         <div class="info-card">
           <div class="icon">🌬️</div>
-          <h3>Respiration et méditation</h3>
-          <p>
-            Utiliser des pratiques simples pour renforcer l’énergie,
-            l’attention, le calme intérieur et la disponibilité mentale.
-          </p>
+          <h3>Respiration</h3>
+          <p>Outils simples pour gérer le stress.</p>
         </div>
 
         <div class="info-card">
           <div class="icon">🚀</div>
           <h3>Leadership</h3>
-          <p>
-            Prendre confiance, mieux communiquer, agir avec responsabilité
-            et devenir un appui pour d’autres jeunes.
-          </p>
+          <p>Prendre confiance et agir.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="revenus" class="section section-soft">
+  <!-- PARCOURS -->
+  <section id="parcours" class="section section-soft">
     <div class="container">
-      <p class="eyebrow">Produits & revenus</p>
-      <h2 class="section-title-premium">Des opportunités simples, concrètes et compatibles avec les études</h2>
+      <p class="eyebrow">Parcours</p>
+      <h2 class="section-title-premium">Comment rejoindre le programme</h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <strong>1</strong>
+          <h3>Formulaire</h3>
+          <p>Tu t’inscris en ligne.</p>
+        </div>
+
+        <div class="step-card">
+          <strong>2</strong>
+          <h3>Appel</h3>
+          <p>Un échange pour comprendre ton profil.</p>
+        </div>
+
+        <div class="step-card">
+          <strong>3</strong>
+          <h3>Session</h3>
+          <p>Découverte du programme.</p>
+        </div>
+
+        <div class="step-card">
+          <strong>4</strong>
+          <h3>Démarrage</h3>
+          <p>Tu passes à l’action.</p>
+        </div>
+
+        <div class="step-card">
+          <strong>5</strong>
+          <h3>Leadership</h3>
+          <p>Tu aides d’autres jeunes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- REVENUS VERSION PREMIUM -->
+  <section id="revenus" class="section section-light">
+    <div class="container">
+      <p class="eyebrow">Revenus</p>
+      <h2 class="section-title-premium">Des opportunités concrètes, accessibles et progressives</h2>
 
       <p class="lead">
-        L’objectif n’est pas d’arrêter les études, mais de montrer qu’en consacrant plusieurs heures par semaine
-        à une activité simple de vente, un étudiant peut développer un revenu complémentaire, apprendre le terrain,
-        gagner en confiance et construire progressivement une autonomie réelle.
+        Le programme propose des activités simples à mettre en place. Les revenus ne sont pas garantis
+        et dépendent de l’engagement, du temps investi et de la capacité à passer à l’action.
       </p>
 
       <div class="income-grid">
         <div class="income-card">
-          <div class="small">Exemple 1</div>
-          <h3>Riz reconditionné</h3>
-          <span class="amount">Achat en gros, revente locale</span>
-          <p>
-            Acheter en gros, reconditionner en petits formats, puis revendre sur le campus,
-            dans le quartier ou auprès de proches.
-          </p>
+          <h3>Produits alimentaires</h3>
+          <p>Riz, jus naturels, produits locaux faciles à vendre.</p>
         </div>
 
         <div class="income-card">
-          <div class="small">Exemple 2</div>
-          <h3>Jus naturels</h3>
-          <span class="amount">Produits visibles et demandés</span>
-          <p>
-            Bissap, gingembre, canne à sucre : des produits simples, appréciés et adaptés
-            aux zones étudiantes.
-          </p>
-        </div>
-
-        <div class="income-card">
-          <div class="small">Exemple 3</div>
           <h3>Produits du quotidien</h3>
-          <span class="amount">Rotation rapide</span>
-          <p>
-            Eau, savon, snacks, accessoires téléphone ou petits articles utiles :
-            des ventes accessibles pour commencer.
-          </p>
+          <p>Articles utiles avec rotation rapide et demande constante.</p>
+        </div>
+
+        <div class="income-card">
+          <h3>Micro-commerce</h3>
+          <p>Apprendre à acheter, vendre, ajuster et progresser.</p>
         </div>
       </div>
 
-      <div class="split" style="margin-top:34px;">
-        <div>
-          <div class="panel">
-            <h3>Comment cela fonctionne ?</h3>
-            <p>
-              Nous identifions des produits faciles à vendre. Nous les achetons en gros.
-              Ensuite, nous les proposons aux jeunes à un prix proche du prix de gros,
-              afin qu’ils puissent revendre avec une marge intéressante.
-            </p>
-          </div>
-
-          <div class="panel panel-note" style="margin-top:18px;">
-            <strong>Important</strong>
-            <p>
-              Le programme ne promet pas de revenu garanti. Les résultats dépendent du produit choisi,
-              du volume vendu, de la motivation, de la régularité et de la capacité de chacun à passer à l’action.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div class="cards-grid" style="grid-template-columns:1fr 1fr; margin-top:0;">
-            <div class="info-card">
-              <div class="icon">🌱</div>
-              <h3>Commencer petit</h3>
-              <p>
-                Tester une première vente, apprendre vite et construire progressivement.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <div class="icon">🤝</div>
-              <h3>Vendre autour de soi</h3>
-              <p>
-                Amis, voisins, étudiants, campus, quartier : on commence par le réseau proche.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <div class="icon">⚡</div>
-              <h3>Apprendre par l’action</h3>
-              <p>
-                Progresser en parlant, en vendant, en corrigeant et en recommençant.
-              </p>
-            </div>
-
-            <div class="info-card">
-              <div class="icon">👑</div>
-              <h3>Monter en responsabilité</h3>
-              <p>
-                Les plus réguliers peuvent ensuite aider, recruter et former d’autres jeunes.
-              </p>
-            </div>
-          </div>
-
-          <div class="photo-box">
-            <img src="skytogohero3.png" alt="Jeunes togolais en dynamique de groupe">
-          </div>
-        </div>
+      <div class="panel panel-note" style="margin-top:30px;">
+        <strong>Transparence</strong>
+        <p>
+          Les résultats varient selon chaque participant. Le programme fournit un cadre et des opportunités,
+          mais la réussite dépend de l’implication personnelle.
+        </p>
       </div>
     </div>
   </section>
-    <section id="videos" class="section section-light">
+
+  <!-- OBJECTIONS -->
+  <section class="section section-soft">
     <div class="container">
-      <p class="eyebrow">Vidéos</p>
-      <h2 class="section-title-premium">Découvrir des exemples et initiatives YLTP / PIJE en vidéo</h2>
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 class="section-title-premium">Les questions que beaucoup se posent</h2>
 
-      <p class="lead">
-        Clique directement sur une vignette pour ouvrir la vidéo ou la chaîne correspondante.
-      </p>
+      <div class="cards-grid">
+        <div class="info-card">
+          <h3>Je n’ai pas d’argent</h3>
+          <p>Le programme commence avec des activités simples et accessibles.</p>
+        </div>
 
-      <div class="video-grid">
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/@iahvsouthafrica" target="_blank" rel="noopener noreferrer">
-            <img src="./thumb-south-africa.jpg" alt="Chaîne YouTube IAHV Afrique du Sud">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Chaîne YouTube</span>
-            <h3>Afrique du Sud</h3>
-            <p>Découvrir la chaîne IAHV South Africa et ses initiatives autour de la jeunesse, du leadership et du service.</p>
-          </div>
-        </article>
+        <div class="info-card">
+          <h3>Je suis étudiant</h3>
+          <p>Le programme est conçu pour être compatible avec les études.</p>
+        </div>
 
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/@iahvkenya" target="_blank" rel="noopener noreferrer">
-            <img src="./thumb-kenya.jpg" alt="Chaîne YouTube IAHV Kenya">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Chaîne YouTube</span>
-            <h3>Kenya</h3>
-            <p>Voir des exemples d’actions, d’organisation communautaire et de programmes portés au Kenya.</p>
-          </div>
-        </article>
+        <div class="info-card">
+          <h3>Je n’ai jamais vendu</h3>
+          <p>Tu apprends directement en pratiquant, étape par étape.</p>
+        </div>
 
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=sGzssorvfnA" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/sGzssorvfnA/hqdefault.jpg" alt="Vidéo YLTP Côte d’Ivoire">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Vidéo</span>
-            <h3>Côte d’Ivoire</h3>
-            <p>Voir une présentation vidéo liée au YLTP en Côte d’Ivoire.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=cO10diqfODk" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/cO10diqfODk/hqdefault.jpg" alt="Vidéo PIJE France 2016">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Vidéo</span>
-            <h3>France 2016</h3>
-            <p>Découvrir un exemple vidéo du programme en France.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=6qeHWK9tbyw&t=261s" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.youtube.com/vi/6qeHWK9tbyw/hqdefault.jpg" alt="Vidéo PIJE France 2021">
-            <div class="video-play"><span>▶</span></div>
-          </a>
-          <div class="video-content">
-            <span class="video-label">Vidéo</span>
-            <h3>France 2021</h3>
-            <p>Voir une autre vidéo de présentation du programme en France.</p>
-          </div>
-        </article>
+        <div class="info-card">
+          <h3>Je manque de confiance</h3>
+          <p>Le programme inclut un travail sur le mental et la confiance.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="impact-local" class="section section-soft">
+  <!-- IMPACT LOCAL -->
+  <section id="impact-local" class="section section-light">
     <div class="container">
       <p class="eyebrow">Impact terrain</p>
-      <h2 class="section-title-premium">Une approche pensée pour créer un impact concret</h2>
-
-      <p class="lead">
-        YLTP ne propose pas seulement une formation. Le programme vise à créer une dynamique durable :
-        revenus, confiance, responsabilité, équilibre intérieur et engagement au service de la communauté.
-      </p>
+      <h2 class="section-title-premium">Un impact concret au niveau local</h2>
 
       <div class="impact-grid">
         <div class="impact-card">
-          <strong>1</strong>
           <h3>Autonomie économique</h3>
-          <p>
-            Aider les jeunes à démarrer une activité simple, tester la vente, générer une marge
-            et apprendre à construire un revenu complémentaire.
-          </p>
+          <p>Création de micro-activités génératrices de revenus.</p>
         </div>
 
         <div class="impact-card">
-          <strong>2</strong>
-          <h3>Stabilité mentale</h3>
-          <p>
-            Donner des outils pratiques de respiration, de méditation et de gestion du stress
-            pour renforcer la clarté, la concentration et la confiance.
-          </p>
+          <h3>Bien-être mental</h3>
+          <p>Réduction du stress et meilleure stabilité émotionnelle.</p>
         </div>
 
         <div class="impact-card">
-          <strong>3</strong>
-          <h3>Leadership de terrain</h3>
-          <p>
-            Former des jeunes capables d’agir, de prendre des responsabilités, d’aider d’autres jeunes
-            et de devenir des relais positifs dans leur environnement.
-          </p>
+          <h3>Leadership local</h3>
+          <p>Émergence de jeunes leaders engagés dans leur communauté.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="pitchs" class="section section-light">
-    <div class="container">
-      <p class="eyebrow">Sois centré et génère des revenus</p>
-      <h2 class="section-title-premium">Passe à l’action sans attendre</h2>
-
-      <p class="lead">
-        Une stratégie simple, un cadre sérieux, un accompagnement solide et des opportunités concrètes
-        pour les jeunes motivés.
-      </p>
-
-      <div class="pitch-grid">
-        <div class="pitch-card">
-          <h3>Commence maintenant</h3>
-          <p>Tu peux lancer une première activité simple et apprendre rapidement par l’expérience.</p>
-        </div>
-
-        <div class="pitch-card">
-          <h3>Teste sans attendre</h3>
-          <p>Même avec peu de moyens, tu peux commencer petit et progresser étape par étape.</p>
-        </div>
-
-        <div class="pitch-card">
-          <h3>Apprends en vendant</h3>
-          <p>Tu achètes, tu revends, tu observes, tu ajustes et tu gardes ta marge.</p>
-        </div>
-
-        <div class="pitch-card">
-          <h3>Retrouve ton équilibre</h3>
-          <p>Tu apprends aussi à mieux gérer ton stress et à renforcer ton calme intérieur.</p>
-        </div>
-
-        <div class="pitch-card">
-          <h3>Avance avec sérieux</h3>
-          <p>Ce n’est pas une promesse magique : c’est un cadre concret pour ceux qui veulent agir.</p>
-        </div>
-
-        <div class="pitch-card">
-          <h3>Rejoins un réseau</h3>
-          <p>Tu progresses avec d’autres jeunes qui veulent développer leur autonomie et leur leadership.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="partenaires" class="section partners-section">
-    <div class="container">
-      <p class="eyebrow">Partenaires</p>
-      <h2 class="section-title-premium">Des partenaires internationaux au service des jeunes, du leadership et des valeurs humaines</h2>
-
-      <p class="lead">
-        YLTP s’inscrit dans une dynamique internationale portée par des organisations engagées
-        dans la réduction du stress, le développement du potentiel humain, le leadership, le service
-        et la promotion des valeurs humaines.
-      </p>
-
-      <div class="partners-grid">
-        <article class="partner-card">
-          <a href="https://www.iahv.org/" target="_blank" rel="noopener noreferrer">
-            <img src="./iahv-logo.png" alt="Logo IAHV" class="partner-logo partner-logo-large">
-          </a>
-
-          <h3>IAHV</h3>
-
-          <p>
-            L’Association Internationale pour les Valeurs Humaines est une ONG créée à Genève en 1997
-            par Sri Sri Ravi Shankar. Elle propose des programmes pour réduire le stress, développer
-            des leaders et favoriser l’épanouissement des valeurs humaines dans les personnes et la société.
-          </p>
-
-          <p>
-            IAHV mène des projets de service, de développement communautaire, d’initiatives humanitaires
-            et de secours aux sinistrés à travers ses organisations et partenaires dans le monde.
-          </p>
-
-          <span class="partner-tag">ONG internationale</span>
-        </article>
-
-        <article class="partner-card">
-          <a href="https://www.artofliving.org/" target="_blank" rel="noopener noreferrer">
-            <img src="./Logo Art of Living.png" alt="Logo Art of Living" class="partner-logo">
-          </a>
-
-          <h3>Art of Living</h3>
-
-          <p>
-            La Fondation Internationale de l'Art de Vivre développe depuis plus de 45 ans des programmes
-            de respiration, de méditation et de développement du potentiel humain pour réduire le stress,
-            favoriser la paix intérieure, renforcer la confiance et améliorer la concentration.
-          </p>
-
-          <p>
-            Présente dans de nombreux pays, elle est accréditée auprès des Nations Unies comme organisation
-            non gouvernementale internationale et ses programmes ont bénéficié à des millions de personnes.
-          </p>
-
-          <span class="partner-tag">Fondation internationale</span>
-        </article>
-
-        <article class="partner-card">
-          <a href="https://www.skycampus.fr/" target="_blank" rel="noopener noreferrer">
-            <img src="./logo.png" alt="Logo SKY Campus" class="partner-logo partner-logo-large">
-          </a>
-
-          <h3>SKY Campus</h3>
-
-          <p>
-            SKY Campus est un programme dédié aux étudiants et jeunes adultes. Il met l’accent sur
-            le bien-être mental, la gestion du stress, la confiance, la concentration et le développement
-            du potentiel humain.
-          </p>
-
-          <p>
-            Dans le cadre de YLTP au Togo, SKY Campus apporte une expertise utile pour travailler avec les étudiants,
-            en complément de l’approche terrain centrée sur les revenus, le leadership et l’action.
-          </p>
-
-          <span class="partner-tag">Partenaire jeunesse</span>
-        </article>
-      </div>
-    </div>
-  </section
-      <!-- IMPACT INTERNATIONAL PREMIUM -->
+  <!-- IMPACT INTERNATIONAL PREMIUM -->
   <section id="impact-international" class="impact-global">
     <div class="container">
 
       <p class="eyebrow">Impact international</p>
 
       <h2 class="section-title-premium">
-        Voici l’impact de la Fondation Art of Living, de son ONG soeur, IAHV et de leurs partenaires
+        Voici l’impact de la Fondation Art of Living, de son ONG sœur, IAHV et de leurs partenaires
       </h2>
 
-      <p class="impact-intro">
-        Ces chiffres représentent l’ensemble des programmes déployés dans le monde
-        (bien-être, respiration, leadership, humanitaire, éducation, jeunesse),
-        et non uniquement le programme YLTP.
+      <p class="impact-lead">
+        Ces chiffres concernent l’ensemble des programmes internationaux (bien-être, humanitaire,
+        éducation, leadership) et non uniquement le programme YLTP.
       </p>
 
-      <div class="impact-stats-premium">
+      <div class="impact-stats-grid">
 
-        <div class="impact-big">
+        <div class="impact-stat">
           <h3>800M+</h3>
-          <p>personnes touchées dans le monde</p>
+          <p>personnes touchées</p>
         </div>
 
-        <div class="impact-row">
-
-          <div class="impact-mini">
-            <h4>182</h4>
-            <p>pays</p>
-          </div>
-
-          <div class="impact-mini">
-            <h4>50M+</h4>
-            <p>participants aux programmes</p>
-          </div>
-
-          <div class="impact-mini">
-            <h4>1M+</h4>
-            <p>étudiants formés</p>
-          </div>
-
-          <div class="impact-mini">
-            <h4>1M+</h4>
-            <p>bénévoles engagés</p>
-          </div>
-
-          <div class="impact-mini">
-            <h4>40K+</h4>
-            <p>formateurs certifiés</p>
-          </div>
-
+        <div class="impact-stat">
+          <h3>182</h3>
+          <p>pays</p>
         </div>
+
+        <div class="impact-stat">
+          <h3>50M+</h3>
+          <p>participants</p>
+        </div>
+
+        <div class="impact-stat">
+          <h3>1M+</h3>
+          <p>étudiants formés</p>
+        </div>
+
+        <div class="impact-stat">
+          <h3>1M+</h3>
+          <p>bénévoles</p>
+        </div>
+
+        <div class="impact-stat">
+          <h3>40K+</h3>
+          <p>formateurs</p>
+        </div>
+
+      </div>
+
+      <div class="impact-proof-note">
+        Données issues de l’écosystème Art of Living / IAHV
       </div>
 
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section">
+  <!-- PARTENAIRES -->
+  <section id="partenaires" class="section partners-section">
     <div class="container">
-      <div class="cta-wrap">
+      <p class="eyebrow">Partenaires</p>
+      <h2 class="section-title-premium">Des organisations internationales engagées</h2>
 
-        <div class="cta-grid">
+      <div class="partners-grid">
 
-          <div class="cta-content">
-            <p class="eyebrow" style="color:#fed7aa;">Passe à l’action</p>
+        <article class="partner-card">
+          <a href="https://www.iahv.org/" target="_blank">
+            <img src="./iahv-logo.png" class="partner-logo partner-logo-large">
+          </a>
+          <h3>IAHV</h3>
+          <p>ONG internationale engagée dans le développement humain.</p>
+        </article>
 
-            <h2>
-              Rejoins un programme qui peut changer ta trajectoire
-            </h2>
+        <article class="partner-card">
+          <a href="https://www.artofliving.org/" target="_blank">
+            <img src="./Logo Art of Living.png" class="partner-logo">
+          </a>
+          <h3>Art of Living</h3>
+          <p>Fondation internationale spécialisée en bien-être et gestion du stress.</p>
+        </article>
 
-            <p>
-              Si tu veux générer un revenu, développer ta confiance,
-              améliorer ta concentration, mieux gérer ton stress et entrer
-              dans une dynamique de leadership, alors ce programme est pour toi.
-            </p>
-          </div>
+        <article class="partner-card">
+          <a href="https://www.skycampus.fr/" target="_blank">
+            <img src="./logo.png" class="partner-logo partner-logo-large">
+          </a>
+          <h3>SKY Campus</h3>
+          <p>Programme dédié aux étudiants et jeunes adultes.</p>
+        </article>
 
-          <div class="cta-card">
-            <strong>Inscription</strong>
-
-            <h3>Rejoins maintenant</h3>
-
-            <p>
-              Remplis ce formulaire pour rejoindre le programme
-              et être recontacté rapidement.
-            </p>
-
-            <a class="btn btn-primary" style="width:100%;" href="https://forms.gle/ZpW65qsza6t5XieB8" target="_blank">
-              👉 Rejoindre le programme
-            </a>
-          </div>
-
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
+  <!-- PREUVES / VIDÉOS -->
+  <section id="videos" class="section section-light">
+    <div class="container">
+      <p class="eyebrow">Exemples concrets</p>
+      <h2 class="section-title-premium">Des initiatives déjà déployées en Afrique</h2>
 
-      <div class="footer-brand">
-        <img src="./Logo Art of Living.png" alt="Art of Living">
-        <img src="./iahv-logo.png" alt="IAHV" class="iahv-logo-footer">
+      <div class="video-grid">
 
-        <div>
-          <strong>YLTP Togo</strong>
-          <span>
-            Programme porté par IAHV • En partenariat avec Art of Living
-          </span>
-        </div>
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/@iahvsouthafrica" target="_blank">
+            <img src="./thumb-south-africa.jpg">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <h3>Afrique du Sud</h3>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/@iahvkenya" target="_blank">
+            <img src="./thumb-kenya.jpg">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <h3>Kenya</h3>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <a class="video-thumb-link" href="https://www.youtube.com/watch?v=sGzssorvfnA" target="_blank">
+            <img src="https://img.youtube.com/vi/sGzssorvfnA/hqdefault.jpg">
+            <div class="video-play"><span>▶</span></div>
+          </a>
+          <div class="video-content">
+            <h3>Côte d’Ivoire</h3>
+          </div>
+        </article>
+
       </div>
-
-      <div class="footer-copy">
-        © 2026 YLTP Togo — Tous droits réservés
-      </div>
-
     </div>
-  </footer>
-
-</body>
-</html>
+  </section>
+  
